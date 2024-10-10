@@ -81,16 +81,18 @@ h2{
 }
 .shunt{
     margin: 30px;
-    padding: 39px;
+    padding: 29px;
     text-align: center;
     background-color: #11263B;
 }
 .shunt h3{
     color: #fff;
     text-shadow: 2px 2px 4px rgba(204, 214, 220, 0.5); /* Horizontal offset, vertical offset, blur radius, color */
-font-size: 2.5rem;
+    font-size: 30px;
 }
-
+h2{
+    color: #11263B;
+}
 @media (min-width:300px) and (max-width:600px){
     .fixed-height{
         width:300px ;
@@ -102,8 +104,10 @@ font-size: 2.5rem;
     iframe,img{
         width: 350px !important;
     }
+    .shunt h3{
+        font-size: 1.5rem;
+        }
 }
-
 @media (min-width:768px){
     h3{
         font-size: 18px;
