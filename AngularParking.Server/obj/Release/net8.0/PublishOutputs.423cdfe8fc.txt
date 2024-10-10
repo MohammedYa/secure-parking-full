@@ -126,7 +126,7 @@ D:\mgmg\Projects\secure-parking\AngularParking.Server\obj\Release\net8.0\PubTmp\
 D:\mgmg\Projects\secure-parking\AngularParking.Server\obj\Release\net8.0\PubTmp\Out\wwwroot\assets\images\video-home.mp4
 D:\mgmg\Projects\secure-parking\AngularParking.Server\obj\Release\net8.0\PubTmp\Out\wwwroot\favicon.ico
 D:\mgmg\Projects\secure-parking\AngularParking.Server\obj\Release\net8.0\PubTmp\Out\wwwroot\index.html
-D:\mgmg\Projects\secure-parking\AngularParking.Server\obj\Release\net8.0\PubTmp\Out\wwwroot\main-4WU3JFXH.js
+D:\mgmg\Projects\secure-parking\AngularParking.Server\obj\Release\net8.0\PubTmp\Out\wwwroot\main-D322J7ZD.js
 D:\mgmg\Projects\secure-parking\AngularParking.Server\obj\Release\net8.0\PubTmp\Out\wwwroot\media\choose2-YX6AYPGL.jpg
 D:\mgmg\Projects\secure-parking\AngularParking.Server\obj\Release\net8.0\PubTmp\Out\wwwroot\media\color-3LUHUBGQ.png
 D:\mgmg\Projects\secure-parking\AngularParking.Server\obj\Release\net8.0\PubTmp\Out\wwwroot\media\contact-DAZVLROY.jpg
