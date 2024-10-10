@@ -1,0 +1,566 @@
+<section>
+    <section>
+        <div class="container-fluid">
+    
+            <div class="row">
+                <div class="col-md-3 p-0 mb-0 side">
+                    <div class="hafeSide">
+    
+                        <div class="dashboard">
+                            <div class="bord"></div>
+                            <div class="dash">
+                                <img src="assets/images/dashboard.png" class="me-5" alt="">
+                                 <h4 class="mb-0 ">Dashboard</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              <div class="col-md-9">
+                    <div class="dashId">
+                    <h4>Dashboard >> <span>Application information (id {{reqest.id}})</span> </h4>
+                    </div>
+                    <div class="req">
+                     
+
+                        <div class="personal">
+                            
+                            <div class="item">
+                                <div class="line">
+                                    <h4>ID</h4>
+                                </div>
+                                <div class="infoLine">
+                                    <h4>{{reqest.id}}</h4>
+                                </div>
+                            </div>
+                            <div class="reqinfo">
+                                <div>
+                                    <div class="item">
+                                        <div class="line">
+                                            <h4>Full name</h4>
+                                        </div>
+                                        <div class="infoLine">
+                                            <h4>{{reqest.personalInfo.firstName}} {{reqest.personalInfo.middleName}} {{reqest.personalInfo.lastName}}</h4>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="line">
+                                            <h4>Email</h4>
+                                        </div>
+                                        <div class="infoLine">
+                                            <h4>{{reqest.personalInfo.email}}</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="item">
+                                        <div class="line">
+                                            <h4>Date</h4>
+                                        </div>
+                                        <div class="infoLine">
+                                            <h4>{{reqest.personalInfo.applicantDate}}</h4>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="line">
+                                            <h4>Phone</h4>
+                                        </div>
+                                        <div class="infoLine">
+                                            <h4>{{reqest.personalInfo.phoneNumber}}</h4>
+                                        </div>
+                                    </div>  
+                                </div>
+                            </div>
+                            <div class="address">
+                                <div class="line">
+                                <h4 >Address</h4>
+
+                                </div>
+                                <div class="infoLine">
+                                    <h4 > {{reqest.personalInfo.aptUnitNumber}},{{reqest.personalInfo.streetAddress}}  , {{reqest.personalInfo.state}}</h4>
+ 
+                                </div>
+                            </div>
+
+                            <div class="reqinfo">
+                              
+                                    <div class="item">
+                                        <div class="move">
+                                            <h4>When do you want to move in</h4>
+                                        </div>
+                                        <div class="infoLine">
+                                            <h4>{{reqest.moveInInfo.moveInDate}}</h4>
+                                        </div>
+                                    </div>
+                                   <div class="item">
+                                        <div class="tybe line">
+                                            <h4>Trucks or Trailers</h4>
+                                        </div>
+                                        <div class="infoLine">
+                                            <h4 *ngIf="truckOrTailer">Trucks</h4>
+                                            <h4 *ngIf="!truckOrTailer">Trailers</h4>
+
+                                        </div>
+                                    </div>
+                              
+                               
+                            </div>
+                            <div class="reqinfo">
+                       
+                                    <div class="item">
+                                        <div class="move">
+                                            <h4>RATE APPROVED For per SPOT</h4>
+                                        </div>
+                                        <div class="infoLine">
+                                            <h4>{{reqest.moveInInfo.rateApprovedPerSpot}}$ per SPOT</h4>
+                                        </div>
+                                    </div>
+                              
+
+                            </div>
+                            <div class="address">
+                                <div class="move">
+                                    <h4 class="addres">Location Applied for:</h4>
+
+                                </div>
+                                <div class="infoLine">
+                                    <h4>{{reqest.moveInInfo.locationAppliedFor}}</h4>
+
+                                </div>
+                            </div>
+                            <div class="yesorno">
+                                <div class="cont">
+                                    <h4>Are you a carrier based in Ontario</h4>
+
+                                </div>
+                                <div class="stat">
+                                    <h4 *ngIf="reqest.moveInInfo.isCarrierBasedInOntario">
+                                        <div class="colorStat"></div>
+                                        <span >Yes</span>
+                                    </h4>
+                                    <h4 *ngIf="!reqest.moveInInfo.isCarrierBasedInOntario">
+                                        <div class="colorStat"></div>
+                                        <span >No</span>
+                                    </h4>
+                                </div>
+                            </div>
+                            <div class="yesorno">
+                                <div class="cont">
+                                    <h4 >If not what state or province are you from?</h4>
+
+                                </div>
+                                <div class="stat">
+                                    <h4 *ngIf="stateorprovince">
+                                        <div class="colorStat"></div>
+                                        <span >Yes</span>
+                                    </h4>
+                                    <h4 *ngIf="!stateorprovince">
+                                        <div class="colorStat"></div>
+                                        <span >No</span>
+                                    </h4>
+                                </div>
+                            </div>
+                            <div class="yesorno">
+                                <div class="cont">
+                                    <h4>Has Internal Fleet Repair Shop ?</h4>
+
+                                </div>
+                                <div class="stat">
+                                    <h4 *ngIf="reqest.fleetInfo.hasInternalFleetRepairShop">
+                                        <div class="colorStat"></div>
+                                        <span>Yes</span>
+                                    </h4>
+                                    <h4 *ngIf="!reqest.fleetInfo.hasInternalFleetRepairShop">
+                                        <div class="colorStat"></div>
+                                        <span>No</span>
+                                    </h4>
+                                </div>
+                            </div>
+
+                            <div class="when">
+                                <div class="line">
+                                    <h4>When</h4>
+   
+                                </div>
+                                <div class="infoLine">
+                                  <h4>Last DER</h4>
+   
+                                </div>
+                            </div>
+                            <div class="yesorno">
+                                <div class="cont">
+                                    <h4>Have you ever bounced a chq or missed a payment?</h4>
+
+                                </div>
+                                <div class="stat">
+                                    <h4 *ngIf="reqest.fleetInfo.hasBouncedCheckOrMissedPayment">
+                                        <div class="colorStat"></div>
+                                        <span>Yes</span>
+                                    </h4>
+                                    <h4 *ngIf="!reqest.fleetInfo.hasBouncedCheckOrMissedPayment">
+                                        <div class="colorStat"></div>
+                                        <span>No</span>
+                                    </h4>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="kindOfFleet">
+                            <h2 class="kindLine">Kind of Fleet</h2>
+                            <div class="trailers">
+                                <h4>Trailers</h4>
+
+                                <div class="kind">
+                                    <div class="item">
+                                        <div class="Line">
+                                            <h4>Dry vans</h4>
+
+                                        </div>
+                                        <div class="kindinfo">
+                                            <h4>{{reqest.truck.dryVans}}</h4>
+                                        </div>
+
+                                        
+                                    </div>
+                                    <div class="item">
+                                        <div class="Line">
+                                            <h4>Reefer</h4>
+
+                                        </div>
+                                        <div class="kindinfo">
+                                            <h4>{{reqest.truck.reefer}}</h4>
+                                        </div>
+
+                                        
+                                    </div>
+                                    <div class="item">
+                                        <div class="Line">
+                                            <h4>Flatbed</h4>
+
+                                        </div>
+                                        <div class="kindinfo">
+                                            <h4>{{reqest.truck.flatbed}}</h4>
+                                        </div>
+
+                                        
+                                    </div>
+                                    <div class="item">
+                                        <div class="Line">
+                                            <h4>Other</h4>
+
+                                        </div>
+                                        <div class="kindinfo">
+                                            <h4>{{reqest.truck.otherTrailers}}</h4>
+                                        </div>
+
+                                        
+                                    </div>
+                                    
+                                </div>
+                                <h4>Trucks</h4>
+
+                                <div class="kind">
+                                    <div class="item">
+                                        <div class="Line">
+                                            <h4>Highway trucks </h4>
+
+                                        </div>
+                                        <div class="kindinfo">
+                                            <h4>{{reqest.truck.highwayTrucks}}</h4>
+                                        </div>
+
+                                        
+                                    </div>
+                                    <div class="item">
+                                        <div class="Line">
+                                            <h4>Day Cap</h4>
+
+                                        </div>
+                                        <div class="kindinfo">
+                                            <h4>{{reqest.truck.dayCab}}</h4>
+                                        </div>
+
+                                        
+                                    </div>
+                                    <div class="item">
+                                        <div class="Line">
+                                            <h4>Box Truck</h4>
+
+                                        </div>
+                                        <div class="kindinfo">
+                                            <h4>{{reqest.truck.boxTrucks}}</h4>
+                                        </div>
+
+                                        
+                                    </div>
+                                    <div class="item">
+                                        <div class="Line">
+                                            <h4>Dump Trucks </h4>
+
+                                        </div>
+                                        <div class="kindinfo">
+                                            <h4>{{reqest.truck.dumpTrucks}}</h4>
+                                        </div>
+
+                                        
+                                    </div>
+                                    
+                                </div>
+                            
+                 
+                            </div>
+                        </div>
+                         <div class="refPay"  *ngFor="let Reference of reqest.references">
+                            <h2 class="kindLine">Reference for payment history</h2>
+                            <div class="ref">
+                                <div class="hafeside">
+
+                                    
+                                    <div class="item">
+                                        <div class="refLine">
+                                            <h4>Full name</h4>
+                                        </div>
+                                        <div class="refInfo">
+                                            <h4>{{Reference.name}}</h4>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="refLine">
+                                            <h4>Company</h4>
+                                        </div>
+                                        <div class="refInfo">
+                                            <h4>{{Reference.company}}</h4>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="refLine">
+                                            <h4>Address</h4>
+                                        </div>
+                                        <div class="refInfo">
+                                            <h4>{{Reference.address}}</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="hafeside">
+
+                                    
+                                    <div class="item">
+                                        <div class="refLine">
+                                            <h4>Relationship</h4>
+                                        </div>
+                                        <div class="refInfo">
+                                            <h4>{{Reference.relationship}}</h4>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="refLine">
+                                            <h4>Phone</h4>
+                                        </div>
+                                        <div class="refInfo">
+                                            <h4>{{Reference.phone}}</h4>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="refLine">
+                                            <h4>Email</h4>
+                                        </div>
+                                        <div class="refInfo">
+                                            <h4>{{Reference.email}}</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="refPay" *ngFor="let Landlord of reqest.previousLandlords">
+                            <h2 class="kindLine">Previous Landlord </h2>
+                            <div class="refcontainer">
+
+
+                            <div class="ref">
+                            <div class="hafeside">
+
+
+                            <div class="item">
+                            <div class="refLine">
+                            <h4>Company</h4>
+                            </div>
+                            <div class="refInfo">
+                            <h4>{{Landlord.company}}</h4>
+                            </div>
+                            </div>
+                            <div class="item">
+                            <div class="refLine">
+                            <h4>Space rented</h4>
+                            </div>
+                            <div class="refInfo">
+                            <h4>{{Landlord.spaceRented}}</h4>
+                            </div>
+                            </div>
+
+                            </div>
+                            <div class="hafeside">
+
+
+                            <div class="item">
+                            <div class="refLine">
+                            <h4>Landlord name</h4>
+                            </div>
+                            <div class="refInfo">
+                            <h4>{{Landlord.landlordName}} </h4>
+                            </div>
+                            </div>
+                            <div class="item">
+                            <div class="refLine">
+                            <h4>Phone</h4>
+                            </div>
+                            <div class="refInfo">
+                            <h4>{{Landlord.phone}}</h4>
+                            </div>
+                            </div>
+
+                            </div>
+
+                            </div>
+                            <div class="hafeside ">  
+
+                            <div class="item">
+                            <div class="refLine">
+                            <h4>Address</h4>
+                            </div>
+                            <div class="refInfo">
+                            <h4>{{Landlord.address}}</h4>
+                            </div>
+                            </div>
+
+
+                    
+                            </div>
+                            <div class="fromTo">
+                            <div class="item">
+                            <div class="fromLine">
+                            <h4>From</h4>
+                            </div>
+                            <div class="frominfo">
+                            <h4>{{Landlord.rentalStartDate}}</h4>
+                            </div>
+                            </div>
+                            <div class="item">
+                            <div class="fromLine">
+                            <h4>To</h4>
+                            </div>
+                            <div class="frominfo">
+                            <h4>{{Landlord.rentalEndDate}}</h4>
+                            </div>
+                            </div>
+                            </div>
+                   
+                            </div>
+                          
+                        </div> 
+                
+                        <div class="refPay">
+                            <h2 class="kindLine">Banking Information</h2>
+                            <div class="refcontainer Banking">
+
+
+                            <div class="ref">
+                            <div class="hafeside">
+
+
+                            <div class="item">
+                            <div class="refLine">
+                            <h4>Bank Name</h4>
+                            </div>
+                            <div class="refInfo">
+                            <h4>{{reqest.bankingInfo.bank}}</h4>
+                            </div>
+                            </div>
+                            <div class="item">
+                            <div class="refLine">
+                            <h4>Institution Number</h4>
+                            </div>
+                            <div class="refInfo">
+                            <h4>{{reqest.bankingInfo.phone}}</h4>
+                            </div>
+                            </div>
+                            <div class="item">
+                            <div class="refLine institution">
+                            <h4>Transit Number</h4>
+                            </div>
+                            <div class="refInfo">
+                            <h4>{{reqest.bankingInfo.contact}}</h4>
+                            </div>
+                            </div>
+                            <div class="item">
+                            <div class="refLine">
+                            <h4>Account</h4>
+                            </div>
+                            <div class="refInfo">
+                            <h4> {{reqest.bankingInfo.address}}</h4>
+                            </div>
+                            </div>
+                            </div>
+                   
+
+                            </div>
+                     
+                          
+                       
+                            </div>
+
+                        </div> 
+                
+                         <div class="Documents">
+                        <div class="item">
+                            <h3 class="d-block">Article of incorporation</h3>
+
+
+                            <img [src]="reqest.personalInfo.articleOfIncorporationPath" alt="">
+                   
+                   
+                        </div>
+                        <div class="item">
+                            <h3 class="d-block">Certificate of insurance from your
+                                Liability insurance company with
+                                our company listed.</h3>
+
+                            <img [src]="reqest.personalInfo.certificateOfInsurancePath" alt="">
+                   
+                   
+                        </div>
+                        <div class="item">
+                            <h3 class="d-block">Company Owners Driver’s License</h3>
+
+
+                            <img [src]="reqest.personalInfo.companyOwnersDriverLicensePath" alt="">
+                   
+                   
+                        </div>
+                        <div class="item">
+                            <h3 class="d-block">certified Payment with first and last from the bank</h3>
+
+
+                            <img [src]="reqest.personalInfo.certifiedPaymentPath" alt="">
+                   
+                   
+                        </div>
+                        <div class="item">
+                            <h3 class="d-block"> postdated checks</h3>
+
+
+                            <img [src]="reqest.personalInfo.postdatedChecksPath" alt="">
+                   
+                   
+                        </div>
+                        
+                       </div>  
+                       <div *ngIf="status" class="btns mt-3">
+                        <button  (click)="actionApp(reqest.id,0)">Accept</button>
+                        <button (click)="actionApp(reqest.id,1)" class="reject">Reject</button>
+                       </div>
+                    </div>
+                </div> 
+            </div>
+        </div>
+    </section>
+</section>

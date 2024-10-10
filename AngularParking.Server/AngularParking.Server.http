@@ -1,0 +1,6 @@
+@AngularAngularParking.Server.Server_HostAddress = http://localhost:5073
+
+GET {{AngularAngularParking.Server.Server_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

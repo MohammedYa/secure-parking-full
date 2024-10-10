@@ -1,0 +1,708 @@
+<section class="mb-5 mt-5">
+<div class="container-fluid p-5">
+  <h2 style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);" class="text-center title">Online Booking</h2>
+
+  <form class="mt-5" [formGroup]="BookingForm" (ngSubmit)="submitForm(BookingForm.value)" enctype="multipart/form-data">
+    <div class="card flex justify-content-center">
+      <p-stepper >
+          <p-stepperPanel header="Personal Info">
+              <ng-template pTemplate="content" let-nextCallback="nextCallback" let-index="index">
+                  <div class="flex flex-column h-12rem">
+                      <div class="border-2 border-dashed surface-border border-round surface-ground flex-auto flex justify-content-center align-items-center font-medium">
+
+                        <div class="row mb-4">
+                          <div class="col-md-4 col-sm-12 mb-3">
+                              <input formControlName="PersonalInfo_FirstName" type="text" placeholder="First Name" class="form-control">
+                              <div class="alert alert-danger mt-3" *ngIf="BookingForm.get('PersonalInfo_FirstName')?.invalid && BookingForm.get('PersonalInfo_FirstName')?.touched">
+                                  First name is required.
+                              </div>
+                          </div>
+          
+                          <div class="col-md-4 col-sm-12 mb-3">
+                              <input formControlName="PersonalInfo_MiddleName" type="text" placeholder="Middle Name" class="form-control">
+                              <div class="alert alert-danger mt-3" *ngIf="BookingForm.get('PersonalInfo_MiddleName')?.invalid && BookingForm.get('PersonalInfo_MiddleName')?.touched">
+                                  Middle name is required.
+                              </div>
+                          </div>
+                          <div class="col-md-4 col-sm-12 mb-3">
+                              <input formControlName="PersonalInfo_LastName" type="text" placeholder="Last Name" class="form-control">
+                              <div class="alert alert-danger mt-3" *ngIf="BookingForm.get('PersonalInfo_LastName')?.invalid && BookingForm.get('PersonalInfo_LastName')?.touched">
+                                  Last name is required.
+                              </div>
+                          </div>
+                      </div>
+                      <label for="address">Address</label>
+                      <input formControlName="PersonalInfo_StreetAddress" type="text" placeholder="Street Address" class="form-control mt-3">
+                      <div class="alert alert-danger mt-3" *ngIf="BookingForm.get('PersonalInfo_StreetAddress')?.invalid && BookingForm.get('PersonalInfo_StreetAddress')?.touched">
+                          Street is required.
+                      </div>
+                      <input formControlName="PersonalInfo_AptUnitNumber" type="text" placeholder="Apt/Unit #" class="form-control mt-3">
+                      <div class="alert alert-danger mt-3" *ngIf="BookingForm.get('PersonalInfo_AptUnitNumber')?.invalid && BookingForm.get('PersonalInfo_AptUnitNumber')?.touched">
+                          Apt is required.
+                      </div>
+                      <div class="row">
+                          <div class="col">
+                              <input formControlName="PersonalInfo_City" type="text" placeholder="City" class="form-control mt-3">
+                              <div class="alert alert-danger mt-3" *ngIf="BookingForm.get('PersonalInfo_City')?.invalid && BookingForm.get('PersonalInfo_City')?.touched">
+                                  City is required.
+                              </div>
+                          </div>
+                          <div class="col">
+                              <input formControlName="PersonalInfo_State" type="text" placeholder="State" class="form-control mt-3">
+                              <div class="alert alert-danger mt-3" *ngIf="BookingForm.get('PersonalInfo_State')?.invalid && BookingForm.get('PersonalInfo_State')?.touched">
+                                  State is required.
+                              </div>
+                          </div>
+                      </div>
+                      <input formControlName="PersonalInfo_PostalZipCode" type="text" placeholder="Postal / Zip Code" class="form-control mt-3">
+                      <div class="alert alert-danger mt-3" *ngIf="BookingForm.get('PersonalInfo_PostalZipCode')?.invalid && BookingForm.get('PersonalInfo_PostalZipCode')?.touched">
+                          Zip Code is required.
+                      </div>
+                      <div class="row">
+                          <div class="col-md-6 col-sm-12 mb-3">
+                              <input formControlName="PersonalInfo_PhoneNumber" type="text" placeholder="Phone Number" class="form-control mt-3">
+                              <div class="alert alert-danger mt-3" *ngIf="BookingForm.get('PersonalInfo_PhoneNumber')?.invalid && BookingForm.get('PersonalInfo_PhoneNumber')?.touched">
+                                  Phone Number is required.
+                              </div>
+                          </div>
+                          <div class="col-md-6 col-sm-12 mb-3">
+                              <input formControlName="PersonalInfo_Email" type="email" placeholder="Email" class="form-control mt-3">
+                              <div class="alert alert-danger mt-3" *ngIf="BookingForm.get('PersonalInfo_Email')?.invalid && BookingForm.get('PersonalInfo_Email')?.touched">
+                                  Email Number is required.
+                              </div>
+                          </div>
+                      </div>
+                      <label for="" class="form-label"> Applicant Date</label>
+                      <input formControlName="PersonalInfo_ApplicantDate" type="date" class="form-control mt-3">
+                      <div class="alert alert-danger mt-3" *ngIf="BookingForm.get('PersonalInfo_ApplicantDate')?.invalid && BookingForm.get('PersonalInfo_ApplicantDate')?.touched">
+                          Date is required.
+                      </div>
+                      </div>
+                  </div>
+                  <div class="flex pt-4 justify-content-end">
+                      <p-button label="Complete"  icon="pi pi-arrow-right" iconPos="right"  (onClick)="nextCallback.emit()" />
+                  </div>
+              </ng-template>
+          </p-stepperPanel>
+
+          <p-stepperPanel header="Bank Info and Documents">
+            <ng-template pTemplate="content" let-prevCallback="prevCallback"  let-nextCallback="nextCallback"let-index="index">
+            <div class="flex flex-column h-12rem">
+            <div class="border-2 border-dashed surface-border border-round surface-ground flex-auto flex justify-content-center align-items-center font-medium">
+            <!-- Banking Information -->
+            <div id="fees">
+            <h5>Banking Information</h5>
+            <div >
+            <div class="row mt-3">
+            <div class="col-md-6 col-sm-12 mb-3">
+            <input formControlName="BankingInfo_Bank" type="text" placeholder="Bank Name" class="form-control">
+            <div class="alert alert-danger mt-3" *ngIf="BookingForm.get('BankingInfo_Bank')?.invalid && BookingForm.get('BankingInfo_Bank')?.touched">
+            Bank is required.
+            </div>
+            </div>
+            <div class="col-md-6 col-sm-12 mb-3">
+            <input formControlName="BankingInfo_Contact" type="tel" placeholder="Transit Number" class="form-control">
+            <div class="alert alert-danger mt-3" *ngIf="BookingForm.get('BankingInfo_Contact')?.invalid && BookingForm.get('BankingInfo_Contact')?.touched">
+            Contact is required.
+            </div>
+            </div>
+            </div>
+            <div class="row mt-3">
+            <div class="col-md-6 col-sm-12 mb-3">
+            <input formControlName="BankingInfo_Phone" type="tel" placeholder="Institution Number" class="form-control">
+            <div class="alert alert-danger mt-3" *ngIf="BookingForm.get('BankingInfo_Phone')?.invalid && BookingForm.get('BankingInfo_Phone')?.touched">
+            phone is required.
+            </div>
+            </div>
+            <div class="col-md-6 col-sm-12 mb-3">
+            <input formControlName="BankingInfo_Address" type="text" placeholder="Account" class="form-control">
+            <div class="alert alert-danger mt-3" *ngIf="BookingForm.get('BankingInfo_Address')?.invalid && BookingForm.get('BankingInfo_Address')?.touched">
+            Address is required.
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
+
+
+            <!-- Documentation -->
+            <div id="fees">
+            <h5 class="pt-4">Required Documentation</h5>
+
+            <div >
+            <div class="mb-4 mt-4">
+            <label for="articlesOfIncorporation" class="form-label">Article of Incorporation</label>
+            <input accept=".jpg, .jpeg"class="form-control" type="file" id="articlesOfIncorporation"(change)="onArticleOfIncorporationFormFileSelected($event)">
+            <div *ngIf="BookingForm.get('documentation')?.get('articlesOfIncorporation')?.invalid && BookingForm.get('documentation')?.get('articlesOfIncorporation')?.touched" class="alert alert-danger mt-2">
+            Article of Incorporation is required.
+            </div>
+            </div>
+
+            <div class="mb-4">
+            <label for="driversLicense" class="form-label">Company Owner’s Driver’s License</label>
+            <input accept=".jpg, .jpeg" class="form-control" type="file" id="driversLicense" (change)="onCompanyOwnersDriverLicenseFormFileSelected($event)">
+            <div *ngIf="BookingForm.get('documentation')?.get('driversLicense')?.invalid && BookingForm.get('documentation')?.get('driversLicense')?.touched" class="alert alert-danger mt-2">
+            Driver’s License is required.
+            </div>
+            </div>
+
+            <div class="mb-4">
+            <label for="insuranceCertificate" class="form-label">Certificate of Insurance from Your Liability Insurance Company with Our Company Listed</label>
+            <input accept=".jpg, .jpeg" class="form-control" type="file" id="insuranceCertificate" (change)="onCertificateOfInsuranceFormFileSelected($event)">
+            <div *ngIf="BookingForm.get('documentation')?.get('insuranceCertificate')?.invalid && BookingForm.get('documentation')?.get('insuranceCertificate')?.touched" class="alert alert-danger mt-2">
+            Insurance Certificate is required.
+            </div>
+            </div>
+
+            <div class="mb-4">
+            <label for="certifiedPayment" class="form-label">1 Certified Payment with First and Last from the Bank</label>
+            <input accept=".jpg, .jpeg"class="form-control" type="file" id="certifiedPayment" (change)="onCertifiedPaymentFormFileSelected($event)">
+            <div *ngIf="BookingForm.get('documentation')?.get('certifiedPayment')?.invalid && BookingForm.get('documentation')?.get('certifiedPayment')?.touched" class="alert alert-danger mt-2">
+            Certified Payment is required.
+            </div>
+            </div>
+
+            <div class="mb-4">
+            <label for="postdatedChecks" class="form-label">10 Postdated Checks</label>
+            <input accept=".jpg, .jpeg"class="form-control" type="file" id="postdatedChecks" (change)="onPostdatedChecksFormFileSelected($event)">
+            <div *ngIf="BookingForm.get('documentation')?.get('postdatedChecks')?.invalid && BookingForm.get('documentation')?.get('postdatedChecks')?.touched" class="alert alert-danger mt-2">
+            Postdated Checks are required.
+            </div>
+            </div>
+            </div>
+            </div>  
+            </div>
+                </div>
+                <div class="flex pt-4 justify-content-start">
+                    <p-button    label="Back"  icon="pi pi-arrow-left"  (onClick)="prevCallback.emit()" />
+
+                    <p-button label="Complete"  icon="pi pi-arrow-right" iconPos="right"  (onClick)="nextCallback.emit()" />
+
+                </div>
+            </ng-template>
+          </p-stepperPanel>
+          
+          <p-stepperPanel header="References and PreviousLandlords">
+            <ng-template pTemplate="content" let-prevCallback="prevCallback"let-nextCallback="nextCallback" let-index="index">
+                <div class="flex flex-column h-12rem">
+                    <div class="border-2 border-dashed surface-border border-round surface-ground flex-auto flex justify-content-center align-items-center font-medium">
+
+                         
+            <!-- References -->
+                <div id="fees">
+                  <h5>References for payment history</h5>
+                  <p>Please list three professional References_</p>
+
+                  <div >
+                  <div class="line" >
+                  <div class="row mt-3">
+                  <div class="col-md-6 col-sm-12 mb-3">
+                  <input formControlName="References_NameOne" type="text" placeholder="Name" class="form-control">
+                  <div class="alert alert-danger mt-3" *ngIf="BookingForm.get('References_NameOne')?.invalid && BookingForm.get('References_NameOne')?.touched">
+                  Name is required.
+                  </div>
+                  </div>
+                  <div class="col-md-6 col-sm-12 mb-3">
+                  <input formControlName="References_RelationshipOne" type="text" placeholder="Relationship" class="form-control">
+                  <div class="alert alert-danger mt-3" *ngIf="BookingForm.get('References_RelationshipOne')?.invalid && BookingForm.get('References_RelationshipOne')?.touched">
+                  Relationship is required.
+                  </div>
+                  </div>
+                  </div>
+                  <div class="row mt-3">
+                  <div class="col-md-6 col-sm-12 mb-3">
+                  <input formControlName="References_CompanyOne" type="text" placeholder="Company" class="form-control">
+                  <div class="alert alert-danger mt-3" *ngIf="BookingForm.get('References_CompanyOne')?.invalid && BookingForm.get('References_CompanyOne')?.touched">
+                  Company is required.
+                  </div>
+                  </div>
+                  <div class="col-md-6 col-sm-12 mb-3">
+                  <input formControlName="References_PhoneOne" type="tel" placeholder="Phone" class="form-control">
+                  <div class="alert alert-danger mt-3" *ngIf="BookingForm.get('References_PhoneOne')?.invalid && BookingForm.get('References_PhoneOne')?.touched">
+                  Phone is required and must be a number.
+                  </div>
+                  </div>
+                  </div>
+                  <div class="row mt-3">
+                  <div class="col-md-6 col-sm-12 mb-3">
+                  <input formControlName="References_AddressOne" type="text" placeholder="Address" class="form-control">
+                  <div class="alert alert-danger mt-3" *ngIf="BookingForm.get('References_AddressOne')?.invalid && BookingForm.get('References_AddressOne')?.touched">
+                  Address is required.
+                  </div>
+                  </div>
+                  <div class="col-md-6 col-sm-12 mb-3">
+                  <input formControlName="References_EmailOne" type="email" placeholder="Email" class="form-control">
+                  <div class="alert alert-danger mt-3" *ngIf="BookingForm.get('References_EmailOne')?.invalid && BookingForm.get('References_EmailOne')?.touched">
+                  Valid email is required.
+                  </div>
+                  </div>
+                  </div>
+                  </div>
+                  <div >
+                  <div class="row mt-3">
+                  <div class="col-md-6 col-sm-12 mb-3">
+                  <input formControlName="References_NameTwo" type="text" placeholder="Name" class="form-control">
+                  <div class="alert alert-danger mt-3" *ngIf="BookingForm.get('References_NameTwo')?.invalid && BookingForm.get('References_NameTwo')?.touched">
+                  Name is required.
+                  </div>
+                  </div>
+                  <div class="col-md-6 col-sm-12 mb-3">
+                  <input formControlName="References_RelationshipTwo" type="text" placeholder="Relationship" class="form-control">
+                  <div class="alert alert-danger mt-3" *ngIf="BookingForm.get('References_RelationshipTwo')?.invalid && BookingForm.get('References_RelationshipTwo')?.touched">
+                  Relationship is required.
+                  </div>
+                  </div>
+                  </div>
+                  <div class="row mt-3">
+                  <div class="col-md-6 col-sm-12 mb-3">
+                  <input formControlName="References_CompanyTwo" type="text" placeholder="Company" class="form-control">
+                  <div class="alert alert-danger mt-3" *ngIf="BookingForm.get('References_CompanyTwo')?.invalid && BookingForm.get('References_CompanyTwo')?.touched">
+                  Company is required.
+                  </div>
+                  </div>
+                  <div class="col-md-6 col-sm-12 mb-3">
+                  <input formControlName="References_PhoneTwo" type="tel" placeholder="Phone" class="form-control">
+                  <div class="alert alert-danger mt-3" *ngIf="BookingForm.get('References_PhoneTwo')?.invalid && BookingForm.get('References_PhoneTwo')?.touched">
+                  Phone is required and must be a number.
+                  </div>
+                  </div>
+                  </div>
+                  <div class="row mt-3">
+                  <div class="col-md-6 col-sm-12 mb-3">
+                  <input formControlName="References_AddressTwo" type="text" placeholder="Address" class="form-control">
+                  <div class="alert alert-danger mt-3" *ngIf="BookingForm.get('References_AddressTwo')?.invalid && BookingForm.get('References_AddressTwo')?.touched">
+                  Address is required.
+                  </div>
+                  </div>
+                  <div class="col-md-6 col-sm-12 mb-3">
+                  <input formControlName="References_EmailTwo" type="email" placeholder="Email" class="form-control">
+                  <div class="alert alert-danger mt-3" *ngIf="BookingForm.get('References_EmailTwo')?.invalid && BookingForm.get('References_EmailTwo')?.touched">
+                  Valid email is required.
+                  </div>
+                  </div>
+                  </div>
+                  </div>
+
+           
+                  </div>
+              </div> 
+
+          <!-- Previous Landlord -->
+           <div id="fees">
+              <h5>Previous Landlord</h5>
+              <div >
+              <div class="line" >
+                  <div class="row mt-3">
+                  <div class="col-md-6 col-sm-12 mb-3">
+                      <input formControlName="PreviousLandlord_CompanyOne" type="text" placeholder="Company" class="form-control">
+                      <div class="alert alert-danger mt-3" *ngIf="BookingForm.get('PreviousLandlord_CompanyOne')?.invalid && BookingForm.get('PreviousLandlord_CompanyOne')?.touched">
+                      Company is required.
+                      </div>
+                  </div>
+                  <div class="col-md-6 col-sm-12 mb-3">
+                      <input formControlName="PreviousLandlord_PhoneOne" type="tel" placeholder="Phone" class="form-control">
+                      <div class="alert alert-danger mt-3" *ngIf="BookingForm.get('PreviousLandlord_PhoneOne')?.invalid && BookingForm.get('PreviousLandlord_PhoneOne')?.touched">
+                      Phone is required and must be a number.
+                      </div>
+                  </div>
+                  </div>
+                  <div class="row mt-3">
+                  <div class="col-md-6 col-sm-12 mb-3">
+                      <input formControlName="PreviousLandlord_AddressOne" type="text" placeholder="Address" class="form-control">
+                      <div class="alert alert-danger mt-3" *ngIf="BookingForm.get('PreviousLandlord_AddressOne')?.invalid && BookingForm.get('PreviousLandlord_AddressOne')?.touched">
+                      Address is required.
+                      </div>
+                  </div>
+                  <div class="col-md-6 col-sm-12 mb-3">
+                      <input formControlName="PreviousLandlord_LandLordNameOne" type="text" placeholder="Landlord name" class="form-control">
+                      <div class="alert alert-danger mt-3" *ngIf="BookingForm.get('PreviousLandlord_LandLordNameOne')?.invalid && BookingForm.get('PreviousLandlord_LandLordNameOne')?.touched">
+                      Landlord name is required.
+                      </div>
+                  </div>
+                  </div>
+                  <div class="row mt-3">
+                  <div class="col-md-4 col-sm-12 mb-3">
+                      <input formControlName="PreviousLandlord_SpaceRentsOne" type="text" placeholder="Space rented" class="form-control">
+                      <div class="alert alert-danger mt-3" *ngIf="BookingForm.get('PreviousLandlord_SpaceRentsOne')?.invalid && BookingForm.get('PreviousLandlord_SpaceRentsOne')?.touched">
+                      Space rented is required.
+                      </div>
+                  </div>
+                  <div class="col-md-4 col-sm-12 mb-3">
+                      <input formControlName="PreviousLandlord_FromDateOne" type="date" placeholder="From" class="form-control">
+                      <div class="alert alert-danger mt-3" *ngIf="BookingForm.get('PreviousLandlord_FromDateOne')?.invalid && BookingForm.get('PreviousLandlord_FromDateOne')?.touched">
+                      From date is required.
+                      </div>
+                  </div>
+                  <div class="col-md-4 col-sm-12 mb-3">
+                      <input formControlName="PreviousLandlord_ToDateOne" type="date" placeholder="To" class="form-control">
+                      <div class="alert alert-danger mt-3" *ngIf="BookingForm.get('PreviousLandlord_ToDateOne')?.invalid && BookingForm.get('PreviousLandlord_ToDateOne')?.touched">
+                      To date is required.
+                      </div>
+                  </div>
+                  </div>
+                  <select formControlName="PreviousLandlord_MaywecontactyourpreviouslandlordforreferenceOne" class="form-select mt-3 form-select-lg mb-3 w-50" aria-label="Default select example">
+                  <option value="" disabled selected>May we contact your previous landlord for reference</option>
+                  <option value="true">Yes</option>
+                  <option value="false">No</option>
+                  </select>
+              </div>
+
+               <div class="line" >
+                <div class="row mt-3">
+                <div class="col-md-6 col-sm-12 mb-3">
+                    <input formControlName="PreviousLandlord_CompanyTwo" type="text" placeholder="Company" class="form-control">
+                    <div class="alert alert-danger mt-3" *ngIf="BookingForm.get('PreviousLandlord_CompanyTwo')?.invalid && BookingForm.get('PreviousLandlord_CompanyTwo')?.touched">
+                    Company is required.
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-12 mb-3">
+                    <input formControlName="PreviousLandlord_PhoneTwo" type="tel" placeholder="Phone" class="form-control">
+                    <div class="alert alert-danger mt-3" *ngIf="BookingForm.get('PreviousLandlord_PhoneTwo')?.invalid && BookingForm.get('PreviousLandlord_PhoneTwo')?.touched">
+                    Phone is required and must be a number.
+                    </div>
+                </div>
+                </div>
+                <div class="row mt-3">
+                <div class="col-md-6 col-sm-12 mb-3">
+                    <input formControlName="PreviousLandlord_AddressTwo" type="text" placeholder="Address" class="form-control">
+                    <div class="alert alert-danger mt-3" *ngIf="BookingForm.get('PreviousLandlord_AddressTwo')?.invalid && BookingForm.get('PreviousLandlord_AddressTwo')?.touched">
+                    Address is required.
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-12 mb-3">
+                    <input formControlName="PreviousLandlord_LandLordNameTwo" type="text" placeholder="Landlord name" class="form-control">
+                    <div class="alert alert-danger mt-3" *ngIf="BookingForm.get('PreviousLandlord_LandLordNameTwo')?.invalid && BookingForm.get('PreviousLandlord_LandLordNameTwo')?.touched">
+                    Landlord name is required.
+                    </div>
+                </div>
+                </div>
+                <div class="row mt-3">
+                <div class="col-md-4 col-sm-12 mb-3">
+                    <input formControlName="PreviousLandlord_SpaceRentsTwo" type="text" placeholder="Space rented" class="form-control">
+                    <div class="alert alert-danger mt-3" *ngIf="BookingForm.get('PreviousLandlord_SpaceRentsTwo')?.invalid && BookingForm.get('PreviousLandlord_SpaceRentsTwo')?.touched">
+                    Space rented is required.
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-12 mb-3">
+                    <input formControlName="PreviousLandlord_FromDateTwo" type="date" placeholder="From" class="form-control">
+                    <div class="alert alert-danger mt-3" *ngIf="BookingForm.get('PreviousLandlord_FromDateTwo')?.invalid && BookingForm.get('PreviousLandlord_FromDateTwo')?.touched">
+                    From date is required.
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-12 mb-3">
+                    <input formControlName="PreviousLandlord_ToDateTwo" type="date" placeholder="To" class="form-control">
+                    <div class="alert alert-danger mt-3" *ngIf="BookingForm.get('PreviousLandlord_ToDateTwo')?.invalid && BookingForm.get('PreviousLandlord_ToDateTwo')?.touched">
+                    To date is required.
+                    </div>
+                </div>
+                </div>
+                <select formControlName="PreviousLandlord_MaywecontactyourpreviouslandlordforreferenceTwo" class="form-select mt-3 form-select-lg mb-3 w-50" aria-label="Default select example">
+                <option value="" disabled selected>May we contact your previous landlord for reference</option>
+                <option value="true">Yes</option>
+                <option value="false">No</option>
+                </select>
+            
+              </div> 
+              
+              <div  >
+                <div class="row mt-3">
+                <div class="col-md-6 col-sm-12 mb-3">
+                    <input formControlName="PreviousLandlord_CompanyThree" type="text" placeholder="Company" class="form-control">
+                    <div class="alert alert-danger mt-3" *ngIf="BookingForm.get('PreviousLandlord_CompanyThree')?.invalid && BookingForm.get('PreviousLandlord_CompanyThree')?.touched">
+                    Company is required.
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-12 mb-3">
+                    <input formControlName="PreviousLandlord_PhoneThree" type="tel" placeholder="Phone" class="form-control">
+                    <div class="alert alert-danger mt-3" *ngIf="BookingForm.get('PreviousLandlord_PhoneThree')?.invalid && BookingForm.get('PreviousLandlord_PhoneThree')?.touched">
+                    Phone is required and must be a number.
+                    </div>
+                </div>
+                </div>
+                <div class="row mt-3">
+                <div class="col-md-6 col-sm-12 mb-3">
+                    <input formControlName="PreviousLandlord_AddressThree" type="text" placeholder="Address" class="form-control">
+                    <div class="alert alert-danger mt-3" *ngIf="BookingForm.get('PreviousLandlord_AddressThree')?.invalid && BookingForm.get('PreviousLandlord_AddressThree')?.touched">
+                    Address is required.
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-12 mb-3">
+                    <input formControlName="PreviousLandlord_LandLordNameThree" type="text" placeholder="Landlord name" class="form-control">
+                    <div class="alert alert-danger mt-3" *ngIf="BookingForm.get('PreviousLandlord_LandLordNameThree')?.invalid && BookingForm.get('PreviousLandlord_LandLordNameThree')?.touched">
+                    Landlord name is required.
+                    </div>
+                </div>
+                </div>
+                <div class="row mt-3">
+                <div class="col-md-4 col-sm-12 mb-3">
+                    <input formControlName="PreviousLandlord_SpaceRentsThree" type="text" placeholder="Space rented" class="form-control">
+                    <div class="alert alert-danger mt-3" *ngIf="BookingForm.get('PreviousLandlord_SpaceRentsThree')?.invalid && BookingForm.get('PreviousLandlord_SpaceRentsThree')?.touched">
+                    Space rented is required.
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-12 mb-3">
+                    <input formControlName="PreviousLandlord_FromDateThree" type="date" placeholder="From" class="form-control">
+                    <div class="alert alert-danger mt-3" *ngIf="BookingForm.get('PreviousLandlord_FromDateThree')?.invalid && BookingForm.get('PreviousLandlord_FromDateThree')?.touched">
+                    From date is required.
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-12 mb-3">
+                    <input formControlName="PreviousLandlord_ToDateThree" type="date" placeholder="To" class="form-control">
+                    <div class="alert alert-danger mt-3" *ngIf="BookingForm.get('PreviousLandlord_ToDateThree')?.invalid && BookingForm.get('PreviousLandlord_ToDateThree')?.touched">
+                    To date is required.
+                    </div>
+                </div>
+                </div>
+                <select formControlName="PreviousLandlord_MaywecontactyourpreviouslandlordforreferenceThree" class="form-select mt-3 form-select-lg mb-3 w-50" aria-label="Default select example">
+                <option value="" disabled selected>May we contact your previous landlord for reference</option>
+                <option value="true">Yes</option>
+                <option value="false">No</option>
+                </select>
+            
+              </div>
+              </div>
+          </div> 
+
+         
+                    </div>
+                </div>
+                <div class="flex pt-4 justify-content-between">
+                  <p-button 
+                      label="Back" 
+                      icon="pi pi-arrow-left" 
+                      (onClick)="prevCallback.emit()" />
+                      <p-button label="Complete"  icon="pi pi-arrow-right" iconPos="right"  (onClick)="nextCallback.emit()" />
+
+              </div>
+            </ng-template>
+          </p-stepperPanel>
+         
+           <p-stepperPanel header="MoveIn Info and Fleet Info">
+              <ng-template pTemplate="content" let-prevCallback="prevCallback" let-index="index">
+                  <div class="flex flex-column h-12rem">
+                      <div class="border-2 border-dashed surface-border border-round surface-ground flex-auto flex justify-content-center align-items-center font-medium">
+                        <div class="row">
+                          <div class="col-md-4 col-sm-12 mb-3">
+                            <label for="MoveInInfo_MoveInDate" class="mt-4">When do you want to move in?</label>
+                            <input type="date" id="MoveInInfo_MoveInDate" class="form-control mt-3" formControlName="MoveInInfo_MoveInDate">
+                            <div class="alert alert-danger mt-3" *ngIf="BookingForm.get('MoveInInfo_MoveInDate')?.invalid && BookingForm.get('MoveInInfo_MoveInDate')?.touched">
+                              Time is required.
+                          </div>
+                          </div>
+                          <div class="col-md-4 col-sm-12 mb-3">
+                            <label class="mt-4">Truck or Trailers</label>
+                            <input list="TruckOrTrailers" class="form-control mt-3" placeholder="Truck or Trailers" formControlName="MoveInInfo_TruckOrTrailers">
+                            <datalist id="TruckOrTrailers">
+                              <option value="Truck"></option>
+                              <option value="Trailers"></option>
+                            </datalist>
+                            
+                            <div class="alert alert-danger mt-3" *ngIf="BookingForm.get('MoveInInfo_TruckOrTrailers')?.invalid && BookingForm.get('MoveInInfo_TruckOrTrailers')?.touched">
+                              Truck or Trailers is required.
+                          </div>
+                          </div>
+                          <div class="col-md-4 col-sm-12 mb-3">
+                            <label class="mt-4">RATE APPROVED For per SPOT</label>
+                            <input type="number" class="form-control mt-3" placeholder="$" formControlName="MoveInInfo_RateApprovedPerSpot">
+                            <div class="alert alert-danger mt-3" *ngIf="BookingForm.get('MoveInInfo_RateApprovedPerSpot')?.invalid && BookingForm.get('MoveInInfo_RateApprovedPerSpot')?.touched">
+                              Rate Approved Per Spot is required.
+                          </div>
+                          </div>
+                        </div>
+                      
+                        <select class="form-select mt-3 form-select-lg mb-3" formControlName="MoveInInfo_LocationAppliedFor">
+                          <option disabled>Location Applied for:</option>
+                          <option value="Derry Rd W & Mavis Rd">Derry Rd W & Mavis Rd</option>
+                          <option value="Lake Ridge Rd & Taunton Rd W">Lake Ridge Rd & Taunton Rd W</option>
+                          <option value="Lawson Rd & Hwy 25">Lawson Rd & Hwy 25</option>
+                          <option value="Dean Dr & Concession Rd 7">Dean Dr & Concession Rd 7</option>
+                        </select>
+                        <div class="alert alert-danger mt-3" *ngIf="BookingForm.get('MoveInInfo_LocationAppliedFor')?.invalid && BookingForm.get('MoveInInfo_LocationAppliedFor')?.touched">
+                          Location Applied For is required.
+                      </div>
+                        <div class="row">
+                          <div class="col-md-6 col-sm-12 mb-3">
+                            <select class="form-select mt-3 form-select-lg mb-3" formControlName="MoveInInfo_IsCarrierBasedInOntario">
+                              <option selected>Are you a carrier based in Ontario</option>
+                              <option value="true">Yes</option>
+                              <option value="false">No</option>
+                            </select>
+                            <div class="alert alert-danger mt-3" *ngIf="BookingForm.get('MoveInInfo_IsCarrierBasedInOntario')?.invalid && BookingForm.get('MoveInInfo_IsCarrierBasedInOntario')?.touched">
+                             Is Carrier Based InOntario is required.
+                          </div>
+                          </div>
+                          <div class="col-md-6 col-sm-12 mb-3">
+                            <select class="form-select mt-3 form-select-lg mb-3" formControlName="MoveInInfo_StateOrProvince">
+                              <option selected>If not what state or province are you from?</option>
+                              <option value="true">Yes</option>
+                              <option value="false">No</option>
+                            </select>
+                            <div class="alert alert-danger mt-3" *ngIf="BookingForm.get('MoveInInfo_stateOrProvince')?.invalid && BookingForm.get('MoveInInfo_stateOrProvince')?.touched">
+                              It is required.
+                          </div>
+                          </div>
+                        </div>
+                      
+                  
+                   
+                        <label for="" class="form-label">If yes, when?</label>
+                        <input type="date" class="form-control w-50" formControlName="FleetInfo_LastBouncedCheckOrMissedPayment">
+                        <div class="alert alert-danger mt-3" *ngIf="BookingForm.get('FleetInfo_LastBouncedCheckOrMissedPayment')?.invalid && BookingForm.get('FleetInfo_LastBouncedCheckOrMissedPayment')?.touched">
+                          It is required.
+                      </div>
+                        <div class="row">
+                          <div class="col">
+                            <select class="form-select mt-3 form-select-lg mb-3" formControlName="FleetInfo_HasBouncedCheckOrMissedPayment">
+                              <option selected>Have you ever bounced a chq or missed a payment?</option>
+                              <option value="true">Yes</option>
+                              <option value="false">No</option>
+                            </select>
+                            <div class="alert alert-danger mt-3" *ngIf="BookingForm.get('FleetInfo_HasBouncedCheckOrMissedPayment')?.invalid && BookingForm.get('FleetInfo_HasBouncedCheckOrMissedPayment')?.touched">
+                              It is required.
+                          </div>
+                          </div>
+                          <div class="col mt-3">
+                            <input type="text" class="form-control" placeholder="If yes, explain?" formControlName="FleetInfo_BouncedCheckExplanation">
+                            <div class="alert alert-danger mt-3" *ngIf="BookingForm.get('FleetInfo_BouncedCheckExplanation')?.invalid && BookingForm.get('FleetInfo_BouncedCheckExplanation')?.touched">
+                              It is required.
+                          </div>
+                          </div>
+                        </div>
+                      
+                        <div class="row">
+                          <div class="col-md-6 col-sm-12 mb-3">
+                            <select class="form-select mt-3 form-select-lg mb-3" formControlName="FleetInfo_HasInternalFleetRepairShop">
+                              <option selected>Does your company have internal Fleet repair shop?</option>
+                              <option value="true">Yes</option>
+                              <option value="false">No</option>
+                            </select>
+                            <div class="alert alert-danger mt-3" *ngIf="BookingForm.get('FleetInfo_HasInternalFleetRepairShop')?.invalid && BookingForm.get('FleetInfo_HasInternalFleetRepairShop')?.touched">
+                              It is required.
+                          </div>
+                          </div>
+                          <div class="col-md-6 col-sm-12 mb-3">
+                            <select class="form-select mt-3 form-select-lg mb-3" formControlName="FleetInfo_WillPerformMaintenanceOnProperties">
+                              <option selected>Will you be performing any maintenance on our properties for your fleet?</option>
+                              <option value="true">Yes</option>
+                              <option value="false">No</option>
+                            </select>
+                            <div class="alert alert-danger mt-3" *ngIf="BookingForm.get('FleetInfo_WillPerformMaintenanceOnProperties')?.invalid && BookingForm.get('FleetInfo_WillPerformMaintenanceOnProperties')?.touched">
+                              It is required.
+                          </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- fleetDetails -->
+                      <div id="fees">
+                      <h5>What kind of fleet do you have?</h5>
+                      <h6>Trailers</h6>
+                      <ul class="list-unstyled row">
+                      <li class="col-md-3">
+                      Dry vans
+                      <input type="number" class="form-control" formControlName="Trailer_DryVans">
+                      <div class="alert alert-danger mt-3" *ngIf="BookingForm.get('Trailer_DryVans')?.invalid && BookingForm.get('Trailer_DryVans')?.touched">
+                      It is required.
+                      </div>
+                      </li>
+                      <li class="col-md-3">
+                      Reefer
+                      <input type="number" class="form-control" formControlName="Trailer_Reefer">
+                      <div class="alert alert-danger mt-3" *ngIf="BookingForm.get('Trailer_Reefer')?.invalid && BookingForm.get('Trailer_Reefer')?.touched">
+                      It is required.
+                      </div>
+                      </li>
+                      <li class="col-md-3">
+                      Flatbed
+                      <input type="number" class="form-control" formControlName="Trailer_Flatbed">
+                      <div class="alert alert-danger mt-3" *ngIf="BookingForm.get('Trailer_Flatbed')?.invalid && BookingForm.get('Trailer_Flatbed')?.touched">
+                      It is required.
+                      </div>
+                      </li>
+                      <li class="col-md-3">
+                      Other
+                      <input type="number" class="form-control" formControlName="Trailer_OtherTrailers">
+                      <div class="alert alert-danger mt-3" *ngIf="BookingForm.get('Trailer_OtherTrailers')?.invalid && BookingForm.get('Trailer_OtherTrailers')?.touched">
+                      It is required.
+                      </div>
+                      </li>
+                      </ul>
+                      <h6>Trucks</h6>
+                      <ul class="list-unstyled row" >
+                      <li class="col-md-3">Highway trucks <input type="number" class="form-control" formControlName="Truck_HighwayTrucks">
+                      <div class="alert alert-danger mt-3" *ngIf="BookingForm.get('Truck_HighwayTrucks')?.invalid && BookingForm.get('Truck_HighwayTrucks')?.touched">
+                      It is required.
+                      </div>
+                      </li>
+                      <li class="col-md-3">Day Cap <input type="number" class="form-control" formControlName="Truck_DayCab">
+                      <div class="alert alert-danger mt-3" *ngIf="BookingForm.get('Truck_DayCab')?.invalid && BookingForm.get('Truck_DayCab')?.touched">
+                      It is required.
+                      </div>
+                      </li>
+
+                      <li class="col-md-3">Box Trucks <input type="number" class="form-control" formControlName="Truck_BoxTrucks">
+                      <div class="alert alert-danger mt-3" *ngIf="BookingForm.get('Truck_BoxTrucks')?.invalid && BookingForm.get('Truck_BoxTrucks')?.touched">
+                      It is required.
+                      </div>
+                      </li>
+                      <li class="col-md-3">Dump Trucks <input type="number" class="form-control" formControlName="Truck_DumpTrucks">
+                      <div class="alert alert-danger mt-3" *ngIf="BookingForm.get('Truck_DumpTrucks')?.invalid && BookingForm.get('Truck_DumpTrucks')?.touched">
+                      It is required.
+                      </div>
+                      </li>
+                      </ul>
+                      </div>
+                  </div>
+
+                  <div class="flex pt-4 justify-content-between">
+                      <p-button 
+                          label="Back" 
+                          icon="pi pi-arrow-left" 
+                          (onClick)="prevCallback.emit()" />
+
+                          <div class="button">
+                            <button type="submit"    class="btn  mt-3 w-50">Book</button>
+                          </div>
+                  </div>
+              </ng-template>
+          </p-stepperPanel>
+          
+          
+      </p-stepper>
+    </div>
+  </form>
+</div>  
+</section>
+
+
+ 
+
+
+           
+           
+
+<!-- Fees -->
+<!-- <div id="fees">
+    <h5>FEES</h5>
+    <ul class="list-unstyled">
+    <li class="pt-2">Missed Payment $250.00</li>
+    <li class="pt-2">Gates Damaged $1100 to $2500</li>
+    <li class="pt-2">Poles and Fence $1000 to $10000.00</li>
+    <li class="pt-2">Access Cards $25.00 Each Card</li>
+    </ul>
+</div> -->
+<!-- Agreement Checkbox -->
+<!-- <div class="form-check mt-4">
+            <input class="form-check-input" type="checkbox" id="termsAgreement" formControlName="termsAgreement">
+            <label class="form-check-label" for="termsAgreement">
+              I accept the terms and conditions.
+            </label>
+            <div class="alert alert-danger mt-3" *ngIf="BookingForm.get('termsAgreement')?.invalid && BookingForm.get('termsAgreement')?.touched">
+              You must accept the terms and conditions.
+            </div>
+          </div> -->
+
+
+       
+    
+

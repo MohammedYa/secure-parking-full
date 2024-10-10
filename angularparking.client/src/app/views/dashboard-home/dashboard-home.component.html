@@ -1,0 +1,129 @@
+<section>
+    <div class="container-fluid">
+
+        <div class="row">
+            <div class="col-md-3 p-0 mb-0 side">
+                <div class="hafeSide">
+                    <a routerLink="AllApplication" >
+                        <div class="dashboard mb-4">
+                        <div class="bord"></div>
+                        <div class="dash">
+                        <img src="assets/images/dashboard.png" class="me-5" alt="">
+                        <h4 class="mb-0 ">Dashboard</h4>
+                        </div>
+                        </div>
+                    </a>
+                 <a  routerLink="AcceptRequests" >
+                     <div class="dashboard mb-4">
+                        <div class="bord"></div>
+                        <div class="dash">
+                            <i class="fa-solid fa-circle-check fa-2x me-5 text-success"></i>
+                             <h4 class="mb-0 ">Accepted Requests </h4>
+                        </div>
+                    </div>
+                 </a>
+                 <a routerLink="CanceledRequests">
+                    <div class="dashboard mb-4">
+                        <div class="bord"></div>
+                        <div class="dash">
+                            <i class="fa-solid fa-trash fa-2x text-danger me-5"></i>
+                             <h4 class="mb-0 ">Rejected Requests </h4>
+                        </div>
+                    </div> 
+                  </a> 
+                  <a routerLink="settingEmail">
+                    <div class="dashboard mb-4">
+                        <div class="bord"></div>
+                        <div class="dash">
+                            <i class="fa-solid fa-gear fa-2x text-primary me-5 pe-5"></i>
+                            <h4 class="mb-0 ">Setting E-mail</h4>
+                        </div>
+                    </div> 
+                  </a> 
+                   
+                </div>
+            </div>
+          <div class="col-md-9">
+
+                <div class="dashHome"> 
+                 <div class="filter">
+
+                    
+                    <div class="name">
+                        <h4>Hi Admin</h4>
+                        <p>Welcome to SECURE PARKING SOLUTION       </p>
+                    </div>
+                    <div class="search">
+                        <!-- <input placeholder="Search here ..." type="text"> -->
+                        <i (click)="logOut()" class="fa-solid fa-person-walking-arrow-right fa-2x"></i>
+                    </div>
+                  </div>
+                  <div class="statistics">
+       
+                        <div class="item">
+                            <div  class="itemInfo">
+                            <div class="img">
+                                <img src="assets/images/quote-request.png" alt="">
+                            </div>
+                            <div class="num">
+                                <h6>{{allcount}}</h6>
+                                <p>Total Requests</p>
+                            </div>    
+                            </div>
+                            
+                        </div>
+                    
+                   
+                        <div class="item">
+                            <div class="itemInfo" >
+                            <div class="img">
+                                <img src="assets/images/costumer.png" class="w-75" alt="">
+                            </div>
+                            <div class="num">
+                                <h6>{{pindcount}}</h6>
+                                <p>Total Customers</p>
+                            </div>    
+                            </div>
+                            <div class="status">
+
+                                <div class="active">
+                                    <div class="color"></div>
+                                    <p>Active {{acceptcount}}</p>
+                                </div>
+                                <div class="active">
+                                    <div class="color inactive"></div>
+                                    <p>Inactive <span>{{rejectcount}}</span></p>
+                                </div>
+                            </div>
+                        </div>
+                    
+                    
+                        <div class="item">
+                            <div class="itemInfo" >
+                            <div class="img">
+                                <img src="assets/images/reviews.png" alt="">
+                            </div>
+                            <div class="num">
+                                <h6>2000</h6>
+                                <p>Review</p>
+                            </div>    
+                            </div>
+                            
+                        </div>
+                   
+                  </div>
+                  
+                  <div class="reqests ">
+                    <!-- <div id="all">
+                        <h1>hhhhhhhhhhhhhhhhhhhhhh</h1>
+                    </div>
+                    <div id="alltwo"></div>
+                        <h1>jjjjjjjjjjjjjjjjjjjjj</h1>
+                    </div> -->
+                    <router-outlet></router-outlet>
+                  </div>
+                </div>
+            </div> 
+        </div>
+    </div>
+</section>

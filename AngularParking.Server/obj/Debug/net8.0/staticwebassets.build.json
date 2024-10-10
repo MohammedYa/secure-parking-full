@@ -1,0 +1,31 @@
+{
+  "Version": 1,
+  "Hash": "21ltGg2vfwkJ6Avy/o3BeS+qepGdv5/1tiQ0oqtetKk=",
+  "Source": "AngularParking.Server",
+  "BasePath": "_content/AngularParking.Server",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [
+    {
+      "Identity": "E:\\Jop\\Parking\\AngularParking\\angularparking.client\\angularparking.client.esproj",
+      "Version": 2,
+      "Source": "angularparking.client",
+      "GetPublishAssetsTargets": "GetCurrentProjectPublishStaticWebAssetItems",
+      "AdditionalPublishProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalPublishPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier;SelfContained",
+      "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
+      "AdditionalBuildProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier;SelfContained"
+    }
+  ],
+  "DiscoveryPatterns": [
+    {
+      "Name": "AngularParking.Server\\wwwroot",
+      "Source": "AngularParking.Server",
+      "ContentRoot": "E:\\Jop\\Parking\\AngularParking\\AngularParking.Server\\wwwroot\\",
+      "BasePath": "_content/AngularParking.Server",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": []
+}

@@ -1,0 +1,52 @@
+<div class="container-fluid p-0">
+
+    <div class="row">
+        <div class="col-lg-6" *ngFor="let req of requests">
+            <div class="reqInfo">
+
+        <h4>Application information</h4>
+        <div class="contan">
+        <div class="tittles">
+        <h4>ID</h4>
+        <h4>Full name</h4>
+        <h4>Address</h4>
+        <h4>Phonenumber</h4>
+        <h4>Email</h4>
+        <h4>Postal Zip Code</h4>
+        </div>
+        <div class="info">
+          <h4>{{req.id}}</h4>
+          <h4>{{req.personalInfo.firstName}} {{req.personalInfo.middleName}} {{req.personalInfo.lastName}}</h4>
+          <h4>{{req.personalInfo.state}} , {{req.personalInfo.city}} , {{req.personalInfo.streetAddress}}</h4>
+          <h4>{{req.personalInfo.phoneNumber}}</h4>
+          <h4>{{req.personalInfo.email}}</h4>
+          <h4>{{req.personalInfo.postalZipCode}}</h4>
+        </div>   
+        </div>
+
+        <a [routerLink]="['/ReqestInformation', req.id]" class="seemore">See More ....</a>
+    </div>   
+        </div>
+       
+    </div>
+    <nav aria-label="Page navigation example paginationNav">
+      <ul class="pagination">
+         <li class="page-item">
+          <a class="page-link"aria-label="Previous" (click)="prviousPageNumber()">
+            <span aria-hidden="true">&laquo;</span>
+          </a>
+        </li> 
+        <li class="page-item"><a class="page-link" (click)="changePageNumber($event)" >1</a></li>
+        <li class="page-item"><a class="page-link" (click)="changePageNumber($event)">2</a></li>
+        <li class="page-item"><a class="page-link" (click)="changePageNumber($event)">3</a></li>
+
+        <li class="page-item" >
+          <a class="page-link"    aria-label="Next" (click)="NextPageNumber()">
+            <span aria-hidden="true">&raquo;</span>
+          </a>
+        </li>
+      </ul>
+  </nav>
+  
+
+</div>    

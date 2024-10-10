@@ -1,0 +1,160 @@
+  <!-- <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand" >
+        <img src="assets/images/logo.jpg" class="logo" alt="logo">
+      </a>
+
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i  class="fa-solid fa-bars-staggered  "></i>
+
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+                <a class="nav-link" [routerLink]="['/home']" routerLinkActive="active-link" >Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" [routerLink]="['/about']" routerLinkActive="active-link" >About US</a>
+              </li>
+              <li _ngcontent-icc-c23="" data-wow-duration=".2s" data-wow-offset="0" data-wow-delay="0.4s" class="nav-item dropdown simple-dropdown "><a class="active-link1"  _ngcontent-icc-c23="" data-bs-toggle="dropdown" class="nav-link font-anton text-uppercase">
+                Services
+              </a>
+              <ul  role="menu" class="dropdown-menu " >
+                <li  class="dropdown">
+                  <a  class=" dropdown-toggle" [routerLink]="['/services/YardManagement']" routerLinkActive="active-drop">Yard Operations Management</a>
+                </li>
+                <li class="dropdown"><a class=" dropdown-toggle" [routerLink]="['services//parking']" routerLinkActive="active-drop" >Parking</a></li>
+                <li class="dropdown"><a class=" dropdown-toggle" [routerLink]="['/services/trailer-care']" routerLinkActive="active-drop" >Trailer Care</a></li>
+                <li class="dropdown"><a class=" dropdown-toggle" [routerLink]="['/services/truck-Mechanic']" routerLinkActive="active-drop" >Truck Mechanic</a></li>
+                <li class="dropdown"><a class=" dropdown-toggle" [routerLink]="['/services/mobile-wash']" routerLinkActive="active-drop" >Mobile Wash Onsite</a></li>
+              </ul>
+             
+              <li class="nav-item">
+                <a class="nav-link" [routerLink]="['/request']" routerLinkActive="active-link" >Booking</a>
+              </li> 
+              <li _ngcontent-icc-c23="" data-wow-duration=".2s" data-wow-offset="0" data-wow-delay="0.4s" class="nav-item dropdown simple-dropdown "><a class="active-link1"  _ngcontent-icc-c23="" data-bs-toggle="dropdown" class="nav-link font-anton text-uppercase">
+                Parking Locations
+              </a>
+              <ul  role="menu" class="dropdown-menu " >
+                <li  class="dropdown">
+                  <a  class=" dropdown-toggle" [routerLink]="['/location/mavid']" routerLinkActive="active-drop">Lawson Rd & Hwy 25</a>
+                </li>
+                <li class="dropdown"><a class=" dropdown-toggle" [routerLink]="['/location/derry']" routerLinkActive="active-drop" >Derry Rd W & Mavis Rd </a></li>
+                <li class="dropdown"><a class=" dropdown-toggle" [routerLink]="['/location/lake']" routerLinkActive="active-drop" >Lake Ridge Rd & Taunton Rd W</a></li>
+                <li class="dropdown"><a class=" dropdown-toggle" [routerLink]="['/location/dean']" routerLinkActive="active-drop" >Dean Dr & Concession Rd 7</a></li>
+              </ul>
+              <li class="nav-item">
+                <a class="nav-link" [routerLink]="['/contact']" routerLinkActive="active-link" >Contact</a>
+              </li>
+              <li class="nav-item">
+                <a style="cursor: pointer; margin-right: 20px;" class="nav-link" (click)="Auth()"  >
+                  <img src="assets/images/dashboard.png" alt="">
+                </a>
+              </li>
+        </ul>
+       
+      </div>
+    </div>
+</nav>  -->
+  
+
+<section class="navbar">
+<div class="container-fluid nav-cont"  >
+<div class="slogan">
+  <a class="navbar-brand" >
+    <img src="assets/images/logo.jpg" class="logo" alt="logo">
+  </a>
+  <i  class="fa-solid fa-bars-staggered  " (click)="change()" id="icon"></i>
+
+</div>
+<div class="tabs" id="General">
+  <div class="tab">
+    <a id="tab1"class="nav-link" [routerLink]="['/home']" routerLinkActive="active-link" >Home</a>
+
+  </div>
+  <div class="tab">
+    <a id="tab2" class="nav-link" [routerLink]="['/about']" routerLinkActive="active-link" >About US</a>
+
+  </div>
+  <div _ngcontent-icc-c23="" data-wow-duration=".2s" data-wow-offset="0" data-wow-delay="0.4s" class="tab nav-item dropdown simple-dropdown ">
+    <a class="active-link1 active-link"  _ngcontent-icc-c23="" data-bs-toggle="dropdown" class="nav-link font-anton text-uppercase"> Services </a>
+    <ul  role="menu" class="dropdown-menu " >
+      <li class="dropdown"><a id="tab4" class=" dropdown-toggle" [routerLink]="['/services/YardManagement']" routerLinkActive="active-drop">Yard Operations Management</a></li>
+      <li class="dropdown"><a id="tab5"class=" dropdown-toggle" [routerLink]="['services//parking']" routerLinkActive="active-drop" >Parking</a></li>
+      <li class="dropdown"><a id="tab6"class=" dropdown-toggle" [routerLink]="['/services/trailer-care']" routerLinkActive="active-drop" >Trailer Care</a></li>
+      <li class="dropdown"><a id="tab7"class=" dropdown-toggle" [routerLink]="['/services/truck-Mechanic']" routerLinkActive="active-drop" >Truck Mechanic</a></li>
+      <li class="dropdown"><a id="tab8"class=" dropdown-toggle" [routerLink]="['/services/mobile-wash']" routerLinkActive="active-drop" >Mobile Wash Onsite</a></li>
+    </ul>
+  </div>
+  <div class="tab">
+    <a id="tab3"class="nav-link" [routerLink]="['/request']" routerLinkActive="active-link" >Booking</a>
+
+  </div>
+
+  <div  _ngcontent-icc-c23="" data-wow-duration=".2s" data-wow-offset="0" data-wow-delay="0.4s" class="tab nav-item dropdown simple-dropdown ">
+    <a class="active-link1 active-link"  _ngcontent-icc-c23="" data-bs-toggle="dropdown" class="nav-link font-anton text-uppercase">Parking Locations </a>
+    <ul  role="menu" class="dropdown-menu " >
+      <li class="dropdown"><a id="tab9" class=" dropdown-toggle" [routerLink]="['/location/mavid']" routerLinkActive="active-drop">Lawson Rd & Hwy 25</a>
+      </li>
+      <li class="dropdown"><a id="tab11"class=" dropdown-toggle" [routerLink]="['/location/derry']" routerLinkActive="active-drop" >Derry Rd W & Mavis Rd </a></li>
+      <li class="dropdown"><a id="tab12"class=" dropdown-toggle" [routerLink]="['/location/lake']" routerLinkActive="active-drop" >Lake Ridge Rd & Taunton Rd W</a></li>
+      <li class="dropdown"><a id="tab13"class=" dropdown-toggle" [routerLink]="['/location/dean']" routerLinkActive="active-drop" >Dean Dr & Concession Rd 7</a></li>
+    </ul>
+  </div>
+  <div class="tab">
+    <a class="nav-link"id="tab14" [routerLink]="['/contact']" routerLinkActive="active-link" >Contact</a>
+
+  </div>
+  <div class="tab">
+    <a id="tab15"style="cursor: pointer; margin-right: 20px;" class="nav-link" (click)="Auth()"  >
+      <img src="assets/images/dashboard.png" alt="">
+    </a>
+  </div>
+</div> 
+<div class="tabs " id="tabs" *ngIf="Status">
+  <div class="tab">
+    <a (click)="changetabStatus()"id="tab1"class="nav-link" [routerLink]="['/home']" routerLinkActive="active-link" >Home</a>
+
+  </div>
+  <div class="tab">
+    <a (click)="changetabStatus()"id="tab2" class="nav-link" [routerLink]="['/about']" routerLinkActive="active-link" >About US</a>
+
+  </div>
+  <div _ngcontent-icc-c23="" data-wow-duration=".2s" data-wow-offset="0" data-wow-delay="0.4s" class="tab nav-item dropdown simple-dropdown ">
+    <a class="active-link1 active-link"  _ngcontent-icc-c23="" data-bs-toggle="dropdown" class="nav-link font-anton text-uppercase"> Services </a>
+    <ul  role="menu" class="dropdown-menu " >
+      <li class="dropdown"><a (click)="changetabStatus()"id="tab4" class=" dropdown-toggle" [routerLink]="['/services/YardManagement']" routerLinkActive="active-drop">Yard Operations Management</a></li>
+      <li class="dropdown"><a (click)="changetabStatus()"id="tab5"class=" dropdown-toggle" [routerLink]="['services//parking']" routerLinkActive="active-drop" >Parking</a></li>
+      <li class="dropdown"><a (click)="changetabStatus()"id="tab6"class=" dropdown-toggle" [routerLink]="['/services/trailer-care']" routerLinkActive="active-drop" >Trailer Care</a></li>
+      <li class="dropdown"><a (click)="changetabStatus()"id="tab7"class=" dropdown-toggle" [routerLink]="['/services/truck-Mechanic']" routerLinkActive="active-drop" >Truck Mechanic</a></li>
+      <li class="dropdown"><a (click)="changetabStatus()"id="tab8"class=" dropdown-toggle" [routerLink]="['/services/mobile-wash']" routerLinkActive="active-drop" >Mobile Wash Onsite</a></li>
+    </ul>
+  </div>
+  <div class="tab">
+    <a (click)="changetabStatus()"id="tab3"class="nav-link" [routerLink]="['/request']" routerLinkActive="active-link" >Booking</a>
+
+  </div>
+
+  <div  _ngcontent-icc-c23="" data-wow-duration=".2s" data-wow-offset="0" data-wow-delay="0.4s" class="tab nav-item dropdown simple-dropdown ">
+    <a class="active-link1 active-link"  _ngcontent-icc-c23="" data-bs-toggle="dropdown" class="nav-link font-anton text-uppercase">Parking Locations </a>
+    <ul  role="menu" class="dropdown-menu " >
+      <li class="dropdown"><a (click)="changetabStatus()"id="tab9" class=" dropdown-toggle" [routerLink]="['/location/mavid']" routerLinkActive="active-drop">Lawson Rd & Hwy 25</a>
+      </li>
+      <li class="dropdown"><a (click)="changetabStatus()"id="tab11"class=" dropdown-toggle" [routerLink]="['/location/derry']" routerLinkActive="active-drop" >Derry Rd W & Mavis Rd </a></li>
+      <li class="dropdown"><a (click)="changetabStatus()"id="tab12"class=" dropdown-toggle" [routerLink]="['/location/lake']" routerLinkActive="active-drop" >Lake Ridge Rd & Taunton Rd W</a></li>
+      <li class="dropdown"><a (click)="changetabStatus()"id="tab13"class=" dropdown-toggle" [routerLink]="['/location/dean']" routerLinkActive="active-drop" >Dean Dr & Concession Rd 7</a></li>
+    </ul>
+  </div>
+  <div class="tab">
+    <a (click)="changetabStatus()"class="nav-link"id="tab14" [routerLink]="['/contact']" routerLinkActive="active-link" >Contact</a>
+
+  </div>
+  <div class="tab">
+    <a (click)="changetabStatus()" id="tab15"style="cursor: pointer; margin-right: 20px;" class="nav-link" (click)="Auth()"  >
+      <img src="assets/images/dashboard.png" alt="">
+    </a>
+  </div>
+</div>
+</div>
+</section>  

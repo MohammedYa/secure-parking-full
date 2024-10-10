@@ -1,0 +1,220 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap'); */
+body{
+    font-family: "Anton", sans-serif;
+
+}
+header{
+background-image: url('../../../../assets/images/parkk.jpg');
+background-size: cover;
+background-position: center center;
+inset: 0;
+height: 80vh;
+position: relative;
+}
+.layer{
+    position: absolute;
+    inset: 0;
+    background-color: rgba(22, 36, 51, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    /* padding: 50px; */
+  
+}
+.title{
+    width: 70%;
+}
+.title h2{
+    font-size: 4rem;
+    text-transform: uppercase;
+   font-family: "Anton", sans-serif;
+   text-shadow: 2px 2px 4px rgba(12, 26, 36, 0.5); /* Horizontal offset, vertical offset, blur radius, color */
+
+
+}
+.title h5{
+    font-size: 16px;
+    font-weight: 400;
+    font-family: Anton, sans-serif ;
+        letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-top: 40px;
+    color: rgba(255, 255, 255.1);
+}
+.aboutus{
+    background-color: rgb(247,247,247);
+    padding: 150px;
+}
+.imgabout img ,.about{
+    /* width: 375px; */
+    height: 484px;
+}
+.about{
+    background-color: rgb(32,51,71);
+    padding: 30px;
+}
+.about h3{
+    /* color: #EBF4F6; */
+    color: #fff;
+    letter-spacing: 2px;
+
+}
+.about p{
+font-size:18px;
+margin-top: 40px;
+font-family: "Rubik", sans-serif;
+font-optical-sizing: auto;
+font-weight: 400;
+font-style: normal;
+line-height: 30px;
+text-transform: uppercase;
+letter-spacing: 1px;
+color: rgba(255, 255, 255,.95);
+}
+.about a{
+color: #fff;
+font-family: sans-serif;
+font-weight: 400;
+position: relative;
+cursor: pointer;
+text-transform: uppercase;
+}
+.about a::after{
+    width: 100%;
+    height: 1.5px;
+    content: "";
+    background-color: #fff;
+    position: absolute;
+    bottom: -20%;
+    left: 0px;
+}
+.about a:hover{
+    color:rgb(255, 255, 255,.8)
+}
+.vesion{
+ height: 484px;
+ background-color: #fff;
+}
+/* .veisonImg img{
+    width:  370px;
+} */
+.mission{
+    padding: 20px;
+}
+.mission h3{
+  color: #176B87;
+  letter-spacing: 1.5px;
+  margin: 12px 0px;  
+}
+.mission h5{
+    color: #2e2e2e;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.4em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+@media screen and (min-width:992px ) and (max-width: 1200px) {
+    .title{
+        width: 80%;
+    }
+    .title h2{
+        font-size: 3rem;
+    }
+    .aboutus{
+        padding: 150px 50px;
+    }
+    .about p{
+        font-size:16px;
+        margin-top: 30px;
+        line-height: 25px;
+
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    .title{
+        width: 80%;
+    }
+    .title h2{
+        font-size: 2.7rem;
+    }
+    .aboutus{
+        padding: 100px 20px;
+    }
+    .about p{
+        font-size:14px;
+        margin-top: 30px;
+        line-height: 25px;
+
+    }
+    .mission{
+        padding: 10px;
+    }
+    .mission h5{
+        font-size: 18px;
+        line-height: 1.7em;
+    }
+}
+@media screen and (min-width: 450px) and (max-width: 768px) {
+    .title{
+        width: 80%;
+    }
+    .title h2{
+        font-size: 2rem;
+    }
+    .imgabout img ,.about{
+        height: 400px;
+    }
+    .about{
+        margin-bottom: 50px;
+
+}
+    .aboutus{
+        padding: 100px 20px;
+    }
+    .about p{
+        font-size:14px;
+        margin-top: 30px;
+        line-height: 25px;
+
+    }
+    .mission{
+        padding: 10px;
+    }
+    .mission h5{
+        font-size: 18px;
+        line-height: 1.7em;
+    }
+}
+@media screen and (min-width: 360px) and (max-width: 500px) {
+    .title{
+        width: 80%;
+    }
+    .title h2{
+        font-size: 2rem;
+    }
+    .imgabout img ,.about{
+        height: 400px;
+    }
+    .about{
+               margin-bottom: 50px;
+ 
+    }
+    .aboutus{
+        padding: 100px 20px;
+    }
+    .about p{
+        font-size:14px;
+        margin-top: 30px;
+        line-height: 25px;
+
+    }
+    .mission{
+        padding: 10px;
+    }
+    .mission h5{
+        font-size: 18px;
+        line-height: 1.7em;
+    }
+}

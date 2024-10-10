@@ -1,0 +1,143 @@
+<section class="options">
+    <div class="container">
+        <div class="row  justify-content-center">
+            <div class="col-lg-4 col-md-6 mb-3">
+                <div class="option-one">
+                    <i class="fa-solid fa-envelope-open-text d-block text-center"></i>
+                    <div class="option-ditals">
+                        <span class="d-block text-center">How can we help you?</span>
+                        <a href="mailto:Info@secureparkingsolution.ca"target="_blank"  class="d-block text-center">send us an email</a>
+                    </div>
+                    <div class="text-center option-p">
+                        <p>Info&#64;secureparkingsolution.ca</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-3">
+                <div class="option-one">
+                    <i class="fa-solid fa-mobile d-block text-center"></i>
+                    <div class="option-ditals">
+                        <span class="d-block text-center">Feel free to get in touch?</span>
+                        <a href="tel:+14163338235" target="_blank" class="d-block text-center">Give us a call toady</a>
+                    </div>
+                    <div class="text-center option-p">
+                        <p>(416) 333-8235</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-3">
+                <div class="option-one">
+                    <i class="fa-solid fa-map d-block text-center"></i>
+                    <!-- <i class="fa-regular fa-window-maximize"></i> -->
+                    <div class="option-ditals">
+                        <span class="d-block text-center">get in touch with us</span>
+                        <a  href="https://maps.app.goo.gl/QsNLiZJA5sKiZgye6" target="_blank" class="d-block text-center">Describe What You Want</a>
+                    </div>
+                    <div class="text-center option-p">
+                        <p>154 Queen St S, Mississauga ,
+                            <br>ON L5M 2P4 , Canada </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container p-5">
+       <form (ngSubmit)="submitForm()" [formGroup]="requestMessage">
+        <div class="row text-center p-0">
+            <div class="form-title mb-5">
+                <span>Fill out the form and we’ll be in touch soon!</span>
+                <h5>HOW WE CAN HELP YOU?</h5>
+            </div>
+            <div class="col-md-6 mt-5">
+                <div class="user-info">
+                    <input formControlName="FullName" type="text"  pInputText placeholder="Full Name" class="d-block form-control  input-style" />
+                    <input formControlName="PhoneNumber" type="number"  pInputText placeholder="Phone Number" class="d-block form-control input-style" />
+                    <input formControlName="CompanyName" type="text"  pInputText placeholder="Company Name" class="d-block form-control input-style" />
+                   
+                    
+                </div>
+            </div>
+            <div class="col-md-6 mt-5 d-block">
+                <input formControlName="Address" type="text"  pInputText placeholder="Address " class="d-block form-control input-style" />
+                <input formControlName="Email" type="text" pInputText placeholder="E-mail" class="d-block form-control input-style " />
+                <textarea formControlName="message" name="" id="" class="form-control massge"  placeholder="your Message"></textarea>
+            </div>
+          
+           
+            <button type="submit" [disabled]="requestMessage.invalid"class=" mt-4 btn  btn-style">Send Message</button>
+
+        </div>
+       </form>      
+       <a  class="book "  (click)="bookServices() ">BOOKING</a>
+
+    </div>
+    <div class="hire container p-5">
+        <div class="form-title text-center mb-5">
+            <h5>Launch Your Career with Us!</h5>
+        </div>
+        <form (ngSubmit)="submitApplyForm()" [formGroup]="apllyMessage">
+            <div class="feild">
+                <div class="itemhire">
+                 <input formControlName="FullName" type="text"  pInputText placeholder="Full Name " class="d-block form-control input-style" />
+
+                <div class="error" *ngIf="apllyMessage.get('FullName')?.invalid && apllyMessage.get('FullName')?.touched">
+                    <p class="text-danger">Full Name required</p>
+                </div> 
+                </div>
+                <div class="itemhire">
+                <input formControlName="telephone" type="text"  pInputText placeholder="Telephone Number " class="d-block form-control input-style" />
+
+                <div class="error" *ngIf="apllyMessage.get('telephone')?.invalid && apllyMessage.get('telephone')?.touched">
+                <p class="text-danger">Telephone Number required</p>
+                </div> 
+                </div>
+                <div class="itemhire">
+                <input formControlName="Address" type="text"  pInputText placeholder="Address " class="d-block form-control input-style" />
+
+                <div class="error" *ngIf="apllyMessage.get('Adress')?.invalid && apllyMessage.get('Adress')?.touched">
+                <p class="text-danger">Adress is  required</p>
+                </div> 
+                </div>
+                <div class="itemhire">
+                    <input formControlName="Email" type="text"  pInputText placeholder="E-mail " class="d-block form-control input-style" />
+    
+                    <div class="error" *ngIf="apllyMessage.get('Email')?.invalid && apllyMessage.get('Email')?.touched">
+                    <p class="text-danger">Email is  required</p>
+                    </div> 
+                    </div>
+                <div class="itemhire">
+                <input formControlName="hiringFor" type="text"  pInputText placeholder="Job title " class="d-block form-control input-style" />
+
+                <div class="error" *ngIf="apllyMessage.get('hiringFor')?.invalid && apllyMessage.get('hiringFor')?.touched">
+                <p class="text-danger">Job title required</p>
+                </div> 
+                </div>
+                <div class="itemhire">
+                <input formControlName="years" type="number"  pInputText placeholder="Years of experience" class="d-block form-control input-style" />
+
+                <div class="error" *ngIf="apllyMessage.get('years')?.invalid && apllyMessage.get('years')?.touched">
+                <p class="text-danger" >Number of years of experience required</p>
+                </div> 
+                </div>
+                <button [disabled]="apllyMessage.invalid"type="submit" class=" mt-4 btn  btn-style">apply</button>
+
+            </div>
+        </form>
+    </div>
+
+    <div class="social-p p-5">
+        <div>
+            <p>Connect with social media</p>
+        </div>
+        
+        <div class="social-icon">
+           <a href="https://www.facebook.com/profile.php?id=61562974317427&mibextid=ZbWKwL" target="_blank"><i class="fa-brands fa-facebook-f me-5" style="line-height: 20px;"></i></a> 
+           <a href="https://www.instagram.com/secu_reparking/" target="_blank"> <i class="fa-brands fa-instagram"></i></a>
+        </div>
+    </div>
+
+
+</section>

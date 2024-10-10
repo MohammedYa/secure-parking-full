@@ -1,0 +1,193 @@
+.PARKING{
+    background-color: rgb(247,247,247);
+    padding:  150px ;
+    overflow-x: hidden;
+}
+.whychoose{
+height: 100%;
+}
+.whychoose h2{
+font-size: 1.5rem;
+font-weight: 500;
+color: #11263b;
+padding-left: 12%;
+position: relative;
+letter-spacing: 1.5px;
+}
+.whychoose h2::after{
+    width: 10%;
+    height: 1.5px;
+    content: "";
+    background-color: #11263b;
+    position: absolute;
+    bottom: 45%;
+    left: 0%;
+
+}
+.whychoose h3{
+font-size: 16px;
+font-weight: 300;
+line-height: 2em;
+margin: 30px 0px;
+letter-spacing: 1.5px;
+color: #344C64;
+}
+.whychoose p{
+font-size: 18px;
+font-family: "Rubik", sans-serif;
+font-weight: 400;
+color: #534d48;
+}
+.whychoose p span{
+color: #000;
+font-weight: bold;
+}
+.values{
+    padding-left: 20px;
+    height: 100%;
+
+}
+.spots{
+margin-bottom: 100px;
+}
+.whychoose img,.values img{
+width: 100%;
+height: 100%;
+}
+.values h6{
+font-size: 1.5rem;  
+color: #11263b;
+font-weight: 500;
+line-height: 1.5em;
+margin-bottom: 20px;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+.values p{
+    font-size: 1rem; 
+    font-family: "Rubik", sans-serif;
+    color:#534d48 ;
+    font-weight: 400;
+    line-height: 1.5em;
+    margin: 20px 0px;
+
+}
+
+@media screen and (min-width:992px ) and (max-width: 1200px) {
+.PARKING{
+    padding: 100px 50px;
+}
+.whychoose h2{
+    font-size: 1.25rem;
+    letter-spacing: 1px;
+}
+.whychoose h3{
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+.whychoose p{
+font-size: 16px;
+}
+.values h6{
+font-size: 1.25rem;  
+line-height: 1.5em;
+}
+.values p{
+    font-size: .9rem;   
+    margin: 20px 0px 0px 0px; 
+}
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+.PARKING{
+padding: 100px 20px;
+}
+.whychoose h2{
+font-size: 1rem;
+letter-spacing: 1px;
+padding-left: 12%;
+
+}
+.whychoose h2::after{
+    width: 10%;
+   
+
+}
+.whychoose h3{
+font-size: 12px;
+}
+.whychoose p{
+font-size: 14px;
+}
+.values h6{
+font-size: 1rem;  
+line-height: 1.5em;
+}
+.values p{
+font-size: .8rem;   
+margin: 20px 0px 0px 0px; 
+}
+}
+@media screen and (min-width: 450px) and (max-width: 768px) {
+.PARKING{
+padding: 100px 20px;
+}
+.whychoose h2{
+font-size: 1.1rem;
+letter-spacing: 1px;
+padding-left: 0%;
+
+}
+.whychoose h2::after{
+width: 0%;
+}
+.whychoose h3{
+font-size: 13px;
+}
+.whychoose p{
+font-size: 14px;
+}
+.values{
+    padding: 0px;
+}
+.values h6{
+    margin-top: 20px;
+font-size: .9rem;  
+line-height: 1.5em;
+}
+.values p{
+font-size: .8rem;   
+margin: 20px 0px 0px 0px; 
+}
+}
+@media screen and (min-width: 360px) and (max-width: 500px) {
+.PARKING{
+padding: 100px 10px;
+}
+.whychoose h2{
+font-size: 1.1rem;
+letter-spacing: 1px;
+padding-left: 0%;
+
+}
+.whychoose h2::after{
+width: 00%;
+}
+.whychoose h3{
+font-size: 13px;
+}
+.whychoose p{
+font-size: 14px;
+}
+.values{
+padding: 0px;
+}
+.values h6{
+margin-top: 20px;
+font-size: .9rem;  
+line-height: 1.5em;
+}
+.values p{
+font-size: .8rem;   
+margin: 20px 0px 0px 0px; 
+}
+}

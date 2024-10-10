@@ -1,0 +1,49 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import 'animate.css';
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+body {
+    font-family: "Anton", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    overflow-x: hidden;
+  }
+  :root {
+    --animate-delay: 1s !important;
+  }
+  .dropdown-menu{
+    padding: 18px 0;
+    box-shadow: 0 0 35px #0000001a;
+    margin: 0;
+    border: none;
+    border-radius: 4px;
+    transform: translateX(-20%);
+  }
+  .dropdown-menu li{
+    padding: 5px 20px 10px 15px;
+  }
+  .dropdown:hover>.dropdown-menu{
+		display: block;
+    animation: fadeIn .7s ease-in-out;
+    
+	}
+  .dropdown-toggle::after{
+    display: none;
+  }
+
+  a{
+    text-decoration: none;
+  }
+  @media screen and (min-width: 450px) and (max-width: 768px) {
+    .dropdown-menu{
+     
+      transform: translateX(0%);
+    }
+  }
+  @media screen and (min-width: 360px) and (max-width: 500px) {
+    .dropdown-menu{
+     
+      transform: translateX(0%);
+    }
+  }

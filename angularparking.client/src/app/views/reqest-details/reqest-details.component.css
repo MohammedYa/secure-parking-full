@@ -1,0 +1,573 @@
+section{
+background-color: rgba(59, 76, 94, 0.02);
+
+}
+.side{
+box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.1);
+background-color: #fff;
+padding-top: 40px !important;
+}
+.dashboard{
+position: relative;
+background-color: rgba(59, 76, 94, 0.03);
+
+}
+.bord{
+width: 34px;
+height: 51px;
+border-radius: 10px ; 
+position: absolute;
+background: linear-gradient(0deg, rgba(59, 76, 94, 0.1), rgba(59, 76, 94, 0.1)),
+linear-gradient(0deg, #3B4C5E, #3B4C5E);
+top: 0;
+left: -6%;
+bottom: 0;
+}
+.dash{
+display: flex;
+justify-content: center;
+align-items: center;
+padding: 10px;
+}
+.dash h4{
+font-family: Poppins;
+font-size: 20px;
+font-weight: 700;
+line-height: 30px;
+text-align: left;
+color: rgba(59, 76, 94, 1);
+}
+.req{
+font-family: Poppins;
+width: 90%;
+margin: 40px auto;
+padding: 30px ;
+background-color: #fff;
+border-radius: 20px;
+box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.05);
+
+}
+.dashId{
+width: 90%;
+margin: 40px auto;
+padding: 10px 0px;
+font-family: Poppins;
+font-size: 24px;
+font-weight: 600;
+line-height: 36px;
+text-align: left;
+color: rgba(59, 76, 94, 1);
+}
+.dashId h4 span{
+color: rgba(38, 217, 244, 1);
+}
+.personal{
+margin-top: 30px;
+/* padding: 15px; */
+}
+.item ,.address{
+display: flex;
+/* justify-content: space-between; */
+align-items: center;
+margin-bottom: 20px;
+}
+.reqinfo{
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+.infoLine h4{
+font-family: Poppins;
+font-size: 18px;
+font-weight: 500;
+line-height: 24px;
+text-align: left;
+margin-left: 20px;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.line{
+color: rgba(59, 76, 94, 1);
+background-color: rgba(59, 76, 94, 0.05);
+width: 158px;
+height: 43px;
+display: flex;
+justify-content: center;
+align-items: center;
+border-radius: 10px ;
+
+}
+.line h4,.move h4,.cont h4,.stat h4{
+font-family: Poppins;
+font-size: 18px;
+font-weight: 500;
+line-height: 24px;
+text-align: center;
+color: rgba(59, 76, 94, 1);
+}
+.move{
+width: 292px;
+height: 43px;
+border-radius: 10px;
+background-color: rgba(59, 76, 94, 0.05);
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.tybe{
+width: 192px;
+height: 43px;
+
+border-radius: 10px;
+
+}
+.yesorno{
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin-bottom: 30px;
+}
+.stat{
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+.cont{
+width: 500px;
+height: 43px;
+background-color:  rgba(59, 76, 94, 0.05);
+border-radius: 10px ;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.when{
+display: flex;
+justify-content: left;
+align-items: center;
+margin-bottom: 30px;
+}
+.stat h4{
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.stat h4 span{
+margin-right: 10px;
+}
+.colorStat{
+width: 15px;
+height: 15px;
+background-color: rgba(44, 201, 59, 1);
+border-radius: 2px;
+border: 1px;
+margin-right: 20px;
+}
+/* Kind of Fleet*/
+.kindOfFleet,.refPay{
+border-radius: 10px;
+background-color: rgba(59, 76, 94, 0.05);
+padding: 30px;
+margin-top: 20px;
+}
+.kindOfFleet h2,.kindLine{
+font-family: Poppins;
+font-size: 24px;
+font-weight: 700;
+line-height: 36px;
+text-align: left;  
+color: #3b4c5e; 
+}
+.trailers h4{
+font-family: Poppins;
+font-size: 16px;
+font-weight: 700;
+line-height: 24px;
+text-align: left;
+color: #3b4c5e;    
+}
+.kind {
+display: flex;
+justify-content: left;
+align-items: center;
+margin-bottom: 30px;
+}
+.kind .item{
+margin-right: 15px;
+}
+.Line{
+width: 150px;
+height: 40px;   
+border-radius: 10px ;
+background-color: rgba(255, 255, 255, 1);
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.Line h4,.kindinfo h4,.refInfo h4 ,.refLine h4,.fromLine h4,.frominfo h4{
+font-family: Poppins;
+font-size: 18px;
+font-weight: 500;
+line-height: 30px;
+color: #3B4C5E;
+margin-left: 10px;
+}
+
+.statKind {
+margin-bottom: 30px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+.statKind .qeution{
+width:fit-content;
+/* height: 34px; */
+padding: 10px;
+border-radius: 10px ;
+background-color: #fff; 
+display: flex;
+justify-content: center;
+align-items: center;   
+}
+.statKind .qeution h4{
+font-family: Poppins;
+font-size: 16px;
+font-weight: 500;
+line-height: 30px;
+text-align: center;
+
+}
+/*References for payment history*/
+.ref{
+display: flex;
+justify-content: space-between;
+align-items: center; 
+margin-top: 30px;
+}
+.ref .hafeside{
+margin-bottom: 30px;
+}
+.refLine,.fromLine{
+width: 215px;
+height: 50px;
+border-radius: 10px;
+background-color: #fff;   
+display: flex;
+justify-content: center;
+align-items: center; 
+}
+
+.reason{
+width: 210px;
+}
+.refInfo{
+display: flex;
+justify-content: center;
+align-items: center; 
+
+}
+.fromTo {
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+.refcontainer{
+margin-top: 30px;
+border-bottom: 2px solid rgba(0, 0, 0, 0.5);
+}
+.bank{
+padding: 10px;
+width: auto !important;
+}
+.Banking{
+border: 0px;
+}
+.Documents .item{
+display: block;
+}
+.Documents .item{
+padding: 30px;
+font-family: Poppins;
+font-size: 20px;
+font-weight: 500;
+line-height: 30px;
+text-align: center;
+color:rgba(38, 217, 244, 1);
+
+}
+.Documents .item img{
+width: 80%;
+}
+.btns{
+display: flex;
+justify-content: space-evenly;
+align-items: center; 
+}
+
+.btns button{
+width: 200px;
+height: 70px;
+display: flex;
+justify-content: center;
+align-items: center;
+color: #fff;
+border-radius: 20px;
+border: transparent;
+background-color: rgb(69, 173, 69);
+font-size: 20px;
+font-weight: 400;
+}
+.reject{
+    background-color:rgb(225 62 62) !important;
+}
+@media screen and (min-width:992px ) and (max-width: 1200px) {
+.infoLine h4{
+
+font-size: 15px;
+
+line-height: 18px;
+
+}
+.line{
+width: 120px;
+
+
+}
+.line h4,.move h4,.cont h4,.stat h4{
+font-size: 15px;
+line-height: 18px;
+
+}
+.cont{
+width: 445px;
+}
+.colorStat{
+margin-right: 5px;
+}
+.Line{
+width: 97px;
+}
+.Line h4,.kindinfo h4,.refInfo h4 ,.refLine h4,.fromLine h4,.frominfo h4{
+
+font-size: 14px;
+line-height: 18px;
+
+}
+.statKind .qeution h4{
+font-size: 14px;
+}
+.refLine{
+width: 100px;
+}
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+.req{
+width: 100%;
+padding: 20px;
+}
+.dashId h4{
+font-size: 18px;
+}
+.reqinfo{
+display: block;
+}
+.infoLine h4{
+
+font-size: 13px;
+
+line-height: 18px;
+
+}
+.kind{
+display: block;
+}
+.Line{
+width: 150px;
+}
+.line{
+width: 120px;
+
+
+}
+.line h4,.move h4,.cont h4,.stat h4{
+font-size: 13px;
+line-height: 18px;
+
+}
+.cont{
+width: 400px;
+}
+.colorStat{
+margin-right: 5px;
+}
+.statKind .qeution{
+padding: 5px;
+border-radius: 10px;
+}
+.Line h4,.kindinfo h4,.refInfo h4 ,.refLine h4,.fromLine h4,.frominfo h4{
+font-size: 14px;
+line-height: 18px;
+}
+.statKind .qeution h4{
+font-size: 13px;
+}
+.refLine{
+width: 100px;
+}
+.ref,.fromTo{
+display: block;
+}
+}
+@media screen and (min-width: 450px) and (max-width: 768px) {
+    .container-fluid{
+        padding: 0% !important;
+    }
+    .Documents .item img{
+        width: 90%;
+        }
+.req{
+width: 100%;
+padding: 20px;
+}
+.dashId{
+    width: 100%;
+}
+.dashId h4{
+font-size: 18px;
+}
+.reqinfo{
+display: block;
+}
+.infoLine h4{
+
+font-size: 13px;
+
+line-height: 18px;
+
+}
+.kind{
+display: block;
+}
+.Line{
+width: 150px;
+}
+.line{
+width: 120px;
+
+
+}
+.move{
+width: 240px;
+}
+.kindLine{
+font-size: 20px;
+}
+.line h4,.move h4,.cont h4,.stat h4{
+font-size: 13px;
+line-height: 18px;
+
+}
+.cont{
+width: 260px;
+}
+.colorStat{
+margin-right: 5px;
+}
+.statKind .qeution{
+padding: 5px;
+border-radius: 10px;
+}
+.Line h4,.kindinfo h4,.refInfo h4 ,.refLine h4,.fromLine h4,.frominfo h4{
+font-size: 14px;
+line-height: 18px;
+}
+.statKind .qeution h4{
+font-size: 13px;
+}
+.refLine{
+width: 100px;
+}
+.ref,.fromTo{
+display: block;
+}
+.btns button{
+    width: 160px;
+}
+}
+@media screen and (min-width: 360px) and (max-width: 500px) {
+    .container-fluid{
+        padding: 0% !important;
+    }
+       .Documents .item img{
+        width: 90%;
+        }
+.req{
+width: 100%;
+padding: 20px;
+}
+.dashId{
+    width: 95%;
+}
+.dashId h4{
+font-size: 14px;
+}
+.reqinfo{
+display: block;
+}
+.infoLine h4{
+
+font-size: 13px;
+
+line-height: 18px;
+
+}
+.kind{
+display: block;
+}
+.Line{
+width: 150px;
+}
+.line{
+width: 120px;
+
+
+}
+.move{
+width: 240px;
+}
+.kindLine{
+font-size: 20px;
+}
+.line h4,.move h4,.cont h4,.stat h4{
+font-size: 13px;
+line-height: 18px;
+
+}
+.cont{
+width: 260px;
+}
+.colorStat{
+margin-right: 5px;
+}
+.statKind .qeution{
+padding: 5px;
+border-radius: 10px;
+}
+.Line h4,.kindinfo h4,.refInfo h4 ,.refLine h4,.fromLine h4,.frominfo h4{
+font-size: 11px;
+line-height: 18px;
+}
+.statKind .qeution h4{
+font-size: 13px;
+}
+.refLine{
+width: 100px;
+}
+.ref,.fromTo{
+display: block;
+}
+.btns button{
+    width: 150px;
+}
+}

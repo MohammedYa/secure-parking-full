@@ -1,0 +1,375 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+body{
+font-family: "Anton", sans-serif;
+box-sizing: border-box;
+}
+header{
+background-image: url('../../../../assets/images/trailer-care.jpg');
+background-size: cover;
+background-position: center center;
+inset: 0;
+height: 80vh;
+position: relative;
+}
+.layer{
+position: absolute;
+inset: 0;
+background-color: rgba(17, 38, 59, 0.3);
+display: flex;
+justify-content: center;
+align-items: center;
+color: #fff;
+/* padding: 50px; */
+
+}
+.title{
+width: 70%;
+}
+.title h2{
+font-size: 3.5rem;
+text-transform: uppercase;
+font-family: "Anton", sans-serif;
+letter-spacing: 6px;
+text-shadow: 4px 4px 7px rgba(3, 17, 27, 0.5); /* Horizontal offset, vertical offset, blur radius, color */
+
+}
+
+/*section info */
+.infoservice{
+background-color: #fff;
+padding: 80px 50px;
+text-align: center;
+}
+.infoservice h2{
+text-transform: uppercase;
+margin: 40px;
+font-size: 3rem;
+letter-spacing: 4px;
+color:  #11263B;
+}  
+.infodetails {
+width: 50%;
+margin: auto;
+font-family: "Rubik", sans-serif;
+}
+.infodetails p{
+font-size: 20px;
+font-weight: 400;
+letter-spacing: 1.5px;
+margin: 30px 0px;
+color:  #11263B;
+}
+.infodetails h6{
+font-size: 25px;
+font-weight: 600;
+letter-spacing: 1.5px;
+margin: 30px 0px;
+color: #8f6b3d;
+
+}
+.infodetails p span{
+color:  #11263B;
+font-weight: bold;
+}
+/*section  details of info*/
+.example{
+padding: 100px 0px;
+background-color: rgb(247,247,247);
+}
+.example .item{
+width: 340px;
+height: 480px;
+background-color: #fff;
+border-bottom: 5px solid #6881b8;
+box-shadow: 0px 0px 8px #90a0c1;
+cursor: pointer;
+}
+.img{
+height: 220px;
+overflow: hidden;
+}
+.item img{
+transition: all .5s;
+
+}
+.example .item:hover .img img{
+transform: scale(1.2);
+}
+.details{
+padding: 20px;
+font-family: "Rubik", sans-serif;
+
+}
+.details h4{
+font-size: 20px;
+font-weight: 400px;
+letter-spacing: 1.5px;
+color:  #11263B;
+margin-bottom:20px ;
+}
+.details p{
+font-size: 14px;
+font-weight: 400;
+line-height: 2em;
+}
+
+/* more info section */
+.moreInfo{
+padding: 80px 0px;
+}
+.headline{
+text-align: center;
+line-height: 2em;
+}
+.headline h3{
+letter-spacing: 2px;
+font-size: 2rem;
+font-weight: lighter;
+font-family: "Rubik", sans-serif;
+line-height: 2em;
+}
+.headline h3 span{
+letter-spacing: 2px;
+font-size: 2.5rem;
+font-weight: 300;
+font-family: "Anton", sans-serif;
+margin-top: 20px;
+color:  #11263B;
+}
+.headline p{
+font-size: 18px;
+font-family: "Rubik", sans-serif;
+width: 50%;
+margin: auto;
+margin-bottom: 50px;
+color: #8f6b3d;
+letter-spacing: 1.5px;
+}
+.knowing {
+font-family: "Rubik", sans-serif;
+color:  #11263B;
+letter-spacing:1.2px;
+line-height: 2em;
+font-size: 17px;
+font-weight: 400;
+margin: 20px 0px ;
+}
+.likeAs{
+margin-top: 20px;
+}
+.likeAs h6{
+font-family: "Rubik", sans-serif;
+color:  #11263B;
+letter-spacing:1.2px;
+line-height: 2em;
+font-size: 17px;
+font-weight: 400;
+margin: 10px 0px ;
+margin-left: 30px;
+}
+.likeAs i{
+margin-right: 20px;
+color: #6881b8;
+}
+.likeAs span{
+color: #11263B;
+font-size: 20px;
+}
+
+
+
+@media screen and (min-width:992px ) and (max-width: 1200px) {
+
+/*section info */
+ 
+.infodetails {
+width: 70%;
+
+}
+
+/*section  details of info*/
+
+.example .item{
+width: 295px;
+
+}
+/* more info section */
+
+.headline p{
+width: 70%;
+}
+.knowing {
+font-size: 16px;
+}
+.likeAs h6{
+
+font-size: 16px;
+font-weight: 300;
+margin-left: 30px;
+}
+.likeAs span{
+color: #8f6b3d;
+font-size: 17px;
+}
+
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+/*section info */
+.infoservice h2{
+    margin: 40px 20px;
+    font-size: 2.5rem;
+} 
+.infodetails {
+    width: 95%;
+    
+    }
+    
+    /*section  details of info*/
+    
+    .example .item{
+    width: 240px;
+    
+    }
+    .example .container {
+        padding: 0px !important;
+    }
+    .item img  {
+        height: 100%;
+    }
+    .details h4{
+        font-size: 19px;
+    }
+    /* more info section */
+    
+    .headline p{
+    width: 90%;
+    }
+    .knowing {
+    font-size: 15px;
+    }
+    .likeAs h6{
+    
+    font-size: 16px;
+    font-weight: 400;
+    margin-left: 10px;
+    }
+    .likeAs span{
+    color: #8f6b3d;
+    font-size: 15px;
+    }
+}
+@media screen and (min-width: 450px) and (max-width: 768px) {
+/*section info */
+.infoservice{
+    padding:80px 10px;
+}
+.infoservice h2{
+    margin: 40px 0px;
+    font-size: 1.5rem;
+} 
+.infodetails {
+    width: 98%;
+    
+}
+    
+    /*section  details of info*/
+    .example{
+        overflow: hidden;
+    }
+    .example .item{
+    margin: auto;
+    }
+
+    .item img  {
+        height: 100%;
+    }
+    .details h4{
+        font-size: 19px;
+    }
+    /* more info section */
+    .headline h3{
+letter-spacing: 1.5px;
+font-size: 1.75rem;
+    }
+    .headline p{
+    font-size: 16px;
+    width: 100%;
+    }
+    .knowing {
+    font-size: 15px;
+    }
+    .likeAs h6{
+    
+    font-size: 16px;
+    font-weight: 400;
+    margin-left: 10px;
+    }
+    .likeAs span{
+    color: #8f6b3d;
+    font-size: 15px;
+    }
+
+}
+@media screen and (min-width: 360px) and (max-width: 500px) {
+header{
+height: 40vh;
+}
+    /*section info */
+.infoservice{
+    padding:80px 0px;
+}
+.infoservice h2{
+    margin: 40px 0px;
+    font-size: 1rem;
+} 
+.infodetails {
+    width: 98%;
+    
+}
+.infodetails p{
+    font-size: 17px;
+}
+.infodetails h6{
+    font-size: 21px;
+}   
+    /*section  details of info*/
+    .example{
+        overflow: hidden;
+    }
+    .example .item{
+    margin: auto;
+    }
+
+    .item img  {
+        height: 100%;
+    }
+    .details h4{
+        font-size: 19px;
+    }
+    /* more info section */
+    .headline h3{
+letter-spacing: 1.5px;
+font-size: 1.25rem;
+    }
+    .headline h3 span{
+        font-size: 2rem;
+    }
+    .headline p{
+    font-size: 16px;
+    width: 100%;
+    }
+    .knowing {
+    font-size: 15px;
+    }
+    .likeAs h6{
+    
+    font-size: 16px;
+    font-weight: 400;
+    margin-left: 10px;
+    }
+    .likeAs span{
+    color: #8f6b3d;
+    font-size: 15px;
+    }
+
+}

@@ -1,0 +1,37 @@
+<section class="section">
+    <h2>Our Location</h2>
+      <section class="my-parteners-slider  ">
+          
+          <div class="my-work-container">
+
+          
+              <div class="card">
+                <p-carousel 
+                    [value]="products" 
+                    [numVisible]="3" 
+                    [numScroll]="1" 
+                    [circular]="true" 
+                    [responsiveOptions]="responsiveOptions"autoplayInterval="4000">
+                        <ng-template let-product pTemplate="item">
+                            <div class="p-1">
+                                <div class="mb-3 box-relative">
+                                    <div class="relative" [style.backgroundImage]="'url(' +product.src  + ')'">                                       
+                                           <div class="box-hover">
+                                            <h4 class="name">{{product.name}}</h4>
+                                            <a [routerLink]="product.route" routerLinkActive="router-link-active"  class="text-decoration-none over">OverView</a>
+                                           </div>
+
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </ng-template>
+                </p-carousel>
+            </div>
+          
+            </div>
+      </section>
+      
+        
+</section>

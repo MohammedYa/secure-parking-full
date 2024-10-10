@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+body{
+font-family: "Anton", sans-serif;
+box-sizing: border-box;
+}
+header{
+background-image: url('../../../../assets/images/Truck-wash.jpg');
+background-size: cover;
+background-position: center center;
+inset: 0;
+height: 80vh;
+position: relative;
+}
+.layer{
+position: absolute;
+inset: 0;
+background-color: rgba(22, 36, 51, 0.6);
+display: flex;
+justify-content: center;
+align-items: center;
+color: #fff;
+/* padding: 50px; */
+
+}
+.title{
+width: 70%;
+}
+.title h2{
+font-size: 3.5rem;
+text-transform: uppercase;
+font-family: "Anton", sans-serif;
+letter-spacing: 6px;
+
+}
+
+/*section info */
+.infoservice{
+background-color: #fff;
+padding: 80px 50px;
+text-align: center;
+color: #11263B;
+}
+.infoservice h2{
+text-transform: uppercase;
+margin: 40px;
+font-size: 3rem;
+letter-spacing: 4px;
+color: #11263B;
+}  
+.infodetails {
+width: 50%;
+margin: auto;
+font-family: "Rubik", sans-serif;
+}
+.infodetails p{
+font-size: 20px;
+font-weight: 400;
+letter-spacing: 1.5px;
+margin: 30px 0px;
+color: #11263B;
+}
+.infodetails h6{
+font-size: 25px;
+font-weight: 600;
+letter-spacing: 1.5px;
+margin: 30px 0px;
+color: #8f6b3d;
+
+}
+.infodetails p span{
+color: #272d3a;
+font-weight: bold;
+}
+/*section  details of info*/
+
+
+@media screen and (min-width:992px ) and (max-width: 1200px) {
+
+/*section info */
+ 
+.infodetails {
+width: 70%;
+
+}
+
+/*section  details of info*/
+
+.example .item{
+width: 295px;
+
+}
+/* more info section */
+
+.headline p{
+width: 70%;
+}
+.knowing {
+font-size: 16px;
+}
+.likeAs h6{
+
+font-size: 16px;
+font-weight: 300;
+margin-left: 30px;
+}
+.likeAs span{
+color: #8f6b3d;
+font-size: 17px;
+}
+
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+/*section info */
+.infoservice h2{
+    margin: 40px 20px;
+    font-size: 2.5rem;
+} 
+.infodetails {
+    width: 95%;
+    
+    }
+    
+    /*section  details of info*/
+    
+    .example .item{
+    width: 240px;
+    
+    }
+    .example .container {
+        padding: 0px !important;
+    }
+    .item img  {
+        height: 100%;
+    }
+    .details h4{
+        font-size: 19px;
+    }
+    /* more info section */
+    
+    .headline p{
+    width: 90%;
+    }
+    .knowing {
+    font-size: 15px;
+    }
+    .likeAs h6{
+    
+    font-size: 16px;
+    font-weight: 400;
+    margin-left: 10px;
+    }
+    .likeAs span{
+    color: #8f6b3d;
+    font-size: 15px;
+    }
+}
+@media screen and (min-width: 450px) and (max-width: 768px) {
+/*section info */
+.infoservice{
+    padding:80px 10px;
+}
+.infoservice h2{
+    margin: 40px 0px;
+    font-size: 1.5rem;
+} 
+.infodetails {
+    width: 98%;
+    
+}
+    
+    /*section  details of info*/
+    .example{
+        overflow: hidden;
+    }
+    .example .item{
+    margin: auto;
+    }
+
+    .item img  {
+        height: 100%;
+    }
+    .details h4{
+        font-size: 19px;
+    }
+    /* more info section */
+    .headline h3{
+letter-spacing: 1.5px;
+font-size: 1.75rem;
+    }
+    .headline p{
+    font-size: 16px;
+    width: 100%;
+    }
+    .knowing {
+    font-size: 15px;
+    }
+    .likeAs h6{
+    
+    font-size: 16px;
+    font-weight: 400;
+    margin-left: 10px;
+    }
+    .likeAs span{
+    color: #8f6b3d;
+    font-size: 15px;
+    }
+
+}
+@media screen and (min-width: 360px) and (max-width: 500px) {
+header{
+height: 40vh;
+}
+    /*section info */
+.infoservice{
+    padding:80px 0px;
+}
+.infoservice h2{
+    margin: 40px 0px;
+    font-size: 1rem;
+} 
+.infodetails {
+    width: 98%;
+    
+}
+.infodetails p{
+    font-size: 17px;
+}
+.infodetails h6{
+    font-size: 21px;
+}   
+    /*section  details of info*/
+    .example{
+        overflow: hidden;
+    }
+    .example .item{
+    margin: auto;
+    }
+
+    .item img  {
+        height: 100%;
+    }
+    .details h4{
+        font-size: 19px;
+    }
+    /* more info section */
+    .headline h3{
+letter-spacing: 1.5px;
+font-size: 1.25rem;
+    }
+    .headline h3 span{
+        font-size: 2rem;
+    }
+    .headline p{
+    font-size: 16px;
+    width: 100%;
+    }
+    .knowing {
+    font-size: 15px;
+    }
+    .likeAs h6{
+    
+    font-size: 16px;
+    font-weight: 400;
+    margin-left: 10px;
+    }
+    .likeAs span{
+    color: #8f6b3d;
+    font-size: 15px;
+    }
+
+}

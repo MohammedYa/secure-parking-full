@@ -1,0 +1,134 @@
+section{
+    background-color:#fff;
+    height: 100%;
+    padding: 25px;
+}
+.feature-box{
+    background-color: #fff;
+    padding: 25px;
+    height: 100%;
+}
+.feature-box-content h5{
+    color:#203245;
+    text-transform: capitalize;
+    font-size: 2rem;
+    line-height: 1.5em;
+    margin: 0 0 25px;
+
+}
+.feature-box-content p{
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 500;
+    color: #203245;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    text-shadow: 2px 2px 4px rgba(218, 222, 224, 0.5); /* Horizontal offset, vertical offset, blur radius, color */
+
+}
+a{
+    font-size: 18px;
+    padding: 10px 26px;
+    letter-spacing: 1.5px;
+    text-decoration: none;
+    color: #fff;
+    background-size: 200% auto;
+    background-image: linear-gradient(90deg, #203245, #203245, #203245);
+    border: 2px solid #0000;
+    font-weight: 500;
+    transition: all .6s;
+}
+h4{
+    color: #203245;
+    font-size: 1.5rem;
+    line-height: 1.5em;
+    margin: 0 0 25px;
+    font-weight: 500;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+
+}
+h3{
+    color: #203245;
+    font-size: 38px;
+    line-height: 1.5rem; 
+}
+ul{
+    background-color: rgb(247,247,247);
+    padding: 25px;
+    text-decoration: dotted !important;
+}
+ul li{
+    font-size: 20px;
+    line-height:1.8em;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+
+}
+.accordion-body{
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+
+}
+.aboutservice{
+    font-size: 1.3rem;
+    font-weight: 400;
+}
+.sectionClass{
+    text-align: center;
+    margin: 50px ;
+    text-shadow: 2px 2px 4px rgba(21, 50, 70, 0.5); /* Horizontal offset, vertical offset, blur radius, color */
+
+}
+h2{
+    color: #11263B;
+}
+.shunt{
+    margin: 30px;
+    padding: 39px;
+    text-align: center;
+    background-color: #11263B;
+}
+.shunt h3{
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(204, 214, 220, 0.5); /* Horizontal offset, vertical offset, blur radius, color */
+font-size: 2.5rem;
+}
+
+@media (min-width:300px) and (max-width:600px){
+    .fixed-height{
+        width:300px ;
+    }
+    h3{
+        font-size: 18px;
+        
+    }
+    iframe,img{
+        width: 350px !important;
+    }
+}
+
+@media (min-width:768px){
+    h3{
+        font-size: 18px;
+        
+    }
+   
+}
+@media (min-width:992px){
+ .feature-box-container{
+    display: flex;
+ }
+
+ .feature-box-content h5 {
+font-size: 1.5rem !important;
+ }
+.feature-box{
+padding: 0px !important;
+}
+}
+@media (min-width:1200px){
+ 
+
+}
+@media (min-width:1400px){
+   
+
+
+}

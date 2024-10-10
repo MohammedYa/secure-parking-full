@@ -1,0 +1,133 @@
+
+section{
+    /* height: 480px; */
+    position: relative;
+    text-align: center;
+    background-color: rgb(252, 252, 252);
+}
+section h2{
+font-size:3rem;
+font-weight: 700;
+line-height: 54px;
+letter-spacing: 3.5px;
+text-align: center;
+color: rgb(32, 50, 69);
+padding-top: 2rem;
+margin-bottom: 80px;
+text-shadow: 2px 2px 4px rgba(21, 50, 70, 0.5); /* Horizontal offset, vertical offset, blur radius, color */
+
+}
+
+.my-slider-card{
+    text-align: center;
+}
+.my-slider-card img{
+    display: block !important;
+    width: fit-content !important;
+}
+
+.my-slider{
+    padding-top: 200px;
+}
+.contact{
+    margin: auto;
+    width: 50%;
+}
+.name{
+font-weight: 600;
+line-height: 30px;
+letter-spacing: 1.1px;
+color: #203245;
+margin: 55px auto;
+opacity: 1;
+}
+
+/* owl
+html {
+    scroll-behavior: smooth;
+} */
+
+.partenerImg{
+    /* width: 220px; */
+    transform: scale(1.2);
+    height: 100px;
+    margin: 30px auto;
+    transition: all 0.3s;
+    
+}
+.stafCandaScale{
+    transform: scale(2);
+}
+:host ::ng-deep.p-carousel-indicators{      
+
+
+        display: none !important;
+    
+}
+.card{
+    background-color: transparent;
+    border: transparent;
+}
+@media screen and (min-width:750px) and (max-width:1048px){
+    .section{
+        padding-top: 100px;
+    }
+    .my-slider-card{
+        margin: 45px auto !important;
+        width: 80% !important;
+        height: 70%;
+    }
+    .my-slider-card img {
+        width: 100%;
+    }
+    .partenerImg{
+        margin: 65px auto;
+    }
+    
+    p{
+        margin: auto;
+        text-align: center;
+    }
+}
+@media screen and (max-width:749px){
+    .my-slider-card{
+        margin:50px auto !important;
+        width: 80%;
+        height: 80%;
+    }
+    .partenerImg{
+        margin: 65px auto;
+    }
+
+    .section{
+        padding-top: 100px;
+    }
+}
+@media screen and (max-width:749px){
+    .my-slider-card{
+        margin:50px auto !important;
+        width: 80%;
+        height: 80%;
+    }
+
+    .section{
+        padding-top: 100px;
+    }
+}
+@media screen and (min-width:360px)and (max-width:500px) {
+    p{
+        font-size: 14px;
+        width: 270px;
+        margin: auto;
+        text-align: center;
+    }
+    h4{
+        font-size: 18px;
+    }
+    .partenerImg{
+        margin: 65px auto;
+    }
+    .section{
+        padding-top: 100px;
+    }
+}

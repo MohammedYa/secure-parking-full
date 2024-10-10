@@ -1,0 +1,155 @@
+
+section{
+    position: relative;
+    text-align: center;
+    background-color: rgb(252, 252, 252);
+    margin-top: 50px;
+}
+section h2{
+font-size:2.5rem;
+font-weight: 600;
+line-height: 54px;
+letter-spacing: 3px;
+text-align: center;
+color: rgb(32, 50, 69);
+padding-top: 2rem;
+text-shadow: 2px 2px 4px rgba(21, 50, 70, 0.5); /* Horizontal offset, vertical offset, blur radius, color */
+
+}
+.partenerImg{
+    background-color: #203245;
+    transition: all 0.3s;
+    border: 6px solid #203245;
+}
+:host ::ng-deep.p-carousel-indicators{      
+display: none !important;
+}
+.card{
+    background-color: transparent;
+    border: transparent;
+}
+.relative{
+    background-position: center center;
+    background-size: cover;
+    background-image: url(../../../../assets/images/choose2.jpg);
+    height: 70vh;
+    position: relative;  
+  overflow: hidden;
+  transition: all 1s;
+
+}
+.box-relative{
+    overflow: hidden;
+   
+}
+.box-hover{
+position: absolute;
+top: 110%;
+left: 0;
+height: 100%;
+width: 100%;
+overflow: hidden;
+transition: all 0.8s;
+background-color:  rgba(17,38,59,0.5);
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+}
+.name{
+font-weight: 600;
+line-height: 30px;
+letter-spacing: 1px;
+color: #203245;
+opacity: 1;
+font-size: 1.7rem;
+padding: 20px 15px;
+background-color: rgba(17,38,59,0.7);
+color: rgb(252, 252, 252);
+position: relative;
+left: 100%;
+transition: all .8s;
+transition-delay: .8s;
+}
+.relative:hover .box-hover{
+    top: 0;
+}
+.relative:hover .name{
+    left: 0;
+}
+.over{
+    color: rgb(252, 252, 252);
+    font-size: 1.1rem;
+    padding-top: 25px;
+    transition-delay: 2s;
+    padding: 12px 50px;
+   margin-top: 15px;
+    transform-origin: 50% 50%;
+    background-color: transparent;
+    border: 1px solid rgb(252, 252, 252);
+    border-radius: 19px;
+}
+
+@media screen and (min-width:750px) and (max-width:1048px){
+    .section{
+        padding-top: 100px;
+    }
+    .my-slider-card{
+        margin: 45px auto !important;
+        width: 80% !important;
+        height: 70%;
+    }
+    .my-slider-card img {
+        width: 100%;
+    }
+    .partenerImg{
+        margin: 65px auto;
+    }
+    
+    p{
+        margin: auto;
+        text-align: center;
+    }
+}
+@media screen and (max-width:749px){
+    .my-slider-card{
+        margin:50px auto !important;
+        width: 80%;
+        height: 80%;
+    }
+    .partenerImg{
+        margin: 65px auto;
+    }
+
+    .section{
+        padding-top: 100px;
+    }
+}
+@media screen and (max-width:749px){
+    .my-slider-card{
+        margin:50px auto !important;
+        width: 80%;
+        height: 80%;
+    }
+
+    .section{
+        padding-top: 100px;
+    }
+}
+@media screen and (min-width:360px)and (max-width:500px) {
+    p{
+        font-size: 14px;
+        width: 270px;
+        margin: auto;
+        text-align: center;
+    }
+    h4{
+        font-size: 18px;
+    }
+    .partenerImg{
+        margin: 65px auto;
+    }
+    .section{
+        padding-top: 100px;
+    }
+}

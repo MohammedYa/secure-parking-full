@@ -1,0 +1,43 @@
+<section>
+    
+    <div class="slogan">
+        <img src="assets/images/logofooter2.jpg"class="w-50" alt="">
+    </div>
+
+
+    <div class="login">
+        <div class="loginForm">
+            <h2>Change E-mail</h2>
+            <p>Please enter Next Fields</p>
+            <form [formGroup]="changePassForm" (ngSubmit)="onSubmit(changePassForm.value)">
+                <!-- <div class="username">
+                    <label for="username">Username</label>
+                    <input id="username" formControlName="userName" type="text">
+                    <div class="alert alert-danger mt-3" *ngIf="changePassForm.get('userName')?.invalid && changePassForm.get('userName')?.touched">
+                        User Name is required.
+                    </div>
+                </div> -->
+                <div class="username">
+                    <label for="password">Password</label>
+                    <input id="password" formControlName="Password" type="password">
+                    <div class="alert alert-danger mt-3" *ngIf="changePassForm.get('Password')?.invalid && changePassForm.get('Password')?.touched">
+                        Password is required.
+                    </div>
+                </div>
+                <div class="username">
+                    <label for="password">Confirm Password</label>
+                    <input id="password" formControlName="RePassword" type="password">
+                    <div class="alert alert-danger mt-3" *ngIf="changePassForm.get('RePassword')?.invalid && changePassForm.get('RePassword')?.touched">
+                        Confirm Password is required.
+                    </div>
+                </div>
+                <div>
+                    <div class="alert alert-danger mt-3" *ngIf='er'>{{error}}</div>
+                    
+                    <button type="submit" class="btn">Change</button>
+                </div>
+            </form>
+        </div>
+    </div>
+      
+</section>

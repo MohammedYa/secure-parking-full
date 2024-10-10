@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+footer{
+    background-color: #11263B;
+    /* margin-top: 30px; */
+    color: #fff;
+    font-family: "Rubik", sans-serif;
+
+}
+.details{
+padding: 60px;
+padding-bottom: 20px;
+}
+.info{
+border-top: 1px solid #c2bebe;
+}
+.company{
+/* width: fit-content; */
+transform: translateX(50px);
+}
+.follow{
+    width: fit-content;
+    transform: translateX(70px);
+}
+.item h3{
+font-size: 1.25rem;
+font-weight: 500;
+text-align: left;
+}
+.item ul{
+    list-style-type: none;
+    padding: 0%;
+    padding: 20px  20px 0px 0px;
+
+}
+.item a{
+    text-decoration: none;
+}
+.item p{
+    line-height: 2em;
+    font-size: 13px;
+    padding: 19px  0px 20px 0px;
+color: #86d6de;
+}
+.item ul li {
+    margin-bottom: 10px ;
+    color: #86d6de;
+    font-size: 15px;
+
+}
+.email span{
+    font-size: 13px;
+}
+.email  a,.location a ,.phone a,.item ul li a {
+color: #86d6de;
+}
+.email  a i ,.phone a  i ,.item ul li a i{
+font-size: 13px; 
+margin-right: 15px;
+}
+.location,.phone,.email,.icon{
+    margin-bottom: 30px !important;
+
+}
+.infoitem{
+  display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+     padding: 20px 0px;   
+}
+.infoitem p{
+    color: #86d6de ;
+    font-size: 15px;
+  
+}
+.infoitem p a{
+    color: #86d6de !important;
+
+}
+.socials{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.socials li{
+    margin-right: 20px;
+}
+.socials li a {
+    color: #86d6de;
+    font-size: 17px;
+}
+@media screen and (min-width:992px ) and (max-width: 1200px) {
+    .email a span{
+        font-size: 10px;
+    }
+
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+.item h3{
+font-size: .9rem;
+}
+.item ul{
+    padding: 0px;
+   padding-top: 20px;
+}
+.item p{
+
+    font-size: 13px;
+}
+.item ul li {
+    font-size: 10px;
+}
+.email a span{
+    font-size: 8px;
+}
+.infoitem p {
+    font-size: 12px;
+}
+}
+@media screen and (min-width: 450px) and (max-width: 768px) {
+    .infoitem{
+        margin: 10px 0px;
+    }
+    .infoitem p {
+        font-size: 12px;
+    }
+    .company{
+        transform: translateX(0px);
+        }
+        .follow{
+            transform: translateX(0px);
+        }
+}
+@media screen and (min-width: 360px) and (max-width: 500px) {
+    .infoitem{
+        margin: 10px 0px !important;
+    }
+    .infoitem p {
+        font-size: 12px;
+    }
+    .company{
+        transform: translateX(0px);
+        }
+        .follow{
+            transform: translateX(0px);
+        }
+}

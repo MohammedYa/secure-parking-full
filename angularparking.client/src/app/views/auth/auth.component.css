@@ -1,0 +1,121 @@
+section{
+display: flex;
+height: 100vh;
+}
+.slogan{
+width: 45%;
+background-color: #11263b;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.login{
+width: 50%;
+
+display: flex;
+align-items: center;
+justify-content: center;
+margin: auto;
+}
+.loginForm{
+padding: 50px;
+box-shadow: 0px 2px 50px 0px rgba(0, 0, 0, 0.05);
+border-radius: 20px;
+margin-top: 20px;
+}
+.loginForm h2{
+font-family: Poppins;
+font-size: 30px;
+font-weight: 700;
+line-height: 60px;
+text-align: center;
+color: rgba(59, 76, 94, 1);
+
+}
+.loginForm p{
+width: 70%;
+margin: auto;
+font-family: Poppins;
+font-size: 18px;
+font-weight: 400;
+line-height: 36px;
+text-align: center;
+color: rgba(59, 76, 94, 1);
+}
+.username{
+margin: 10px;
+}
+.username label{
+display: block;
+font-family: Poppins;
+font-size: 16px;
+font-weight: 600;
+line-height: 20px;
+text-align: left;
+color: rgba(59, 76, 94, 1);
+margin-bottom: 10px;
+}
+.username input{
+width: 300px;
+height: 40px;
+border-radius: 10px;
+border: 10px ;
+box-shadow: 0px 2px 50px 0px rgba(0, 0, 0, 0.05);
+margin-bottom: 30px;
+}
+.btn{
+font-family: Poppins;
+font-size: 18px;
+font-weight: 600;
+line-height: 36px;
+text-align: left;
+color: rgba(255, 255, 255, 1);
+width: 300px;
+height: 40px;
+border-radius: 10px ;
+box-shadow: 0px 2px 50px 0px rgba(0, 0, 0, 0.05);
+background-color: rgba(59, 76, 94, 1);
+margin: auto;
+margin: 10px;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.forget{
+font-size: 15px;
+font-family: sans-serif;
+color: #11263b;
+margin-left: 15px;
+cursor: pointer;
+}
+@media screen and (min-width:992px ) and (max-width: 1200px) {
+
+
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+.slogan img{
+    width: 75%;
+}
+.loginForm p{
+    width: 80%;
+}
+}
+@media screen and (min-width: 450px) and (max-width: 768px) {
+    .slogan {
+display: none;
+ }
+ .loginForm p{
+    width: 90%;
+}  
+}
+@media screen and (min-width: 360px) and (max-width: 500px) {
+    .slogan {
+        display: none;
+         }
+         .loginForm{
+            padding: 20px;
+         }
+         .loginForm p{
+            width: 90%;
+        } 
+}

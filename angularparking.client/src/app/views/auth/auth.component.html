@@ -1,0 +1,35 @@
+<section>
+    
+        <div class="slogan">
+            <img src="assets/images/logofooter2.jpg"class="w-50" alt="">
+        </div>
+
+
+        <div class="login">
+            <div class="loginForm">
+                <h2>Login</h2>
+                <p>Please enter your username and passwordd</p>
+                <form [formGroup]="loginForm" (ngSubmit)="onSubmit(loginForm.value)">
+                    <div class="username">
+                        <label for="username">Username</label>
+                        <input id="username" formControlName="username" type="text">
+                        <div class="alert alert-danger mt-3" *ngIf="loginForm.get('username')?.invalid && loginForm.get('username')?.touched">
+                            username is required.
+                        </div>
+                    </div>
+                    <div class="username">
+                        <label for="password">Password</label>
+                        <input id="password" formControlName="password" type="password">
+                        <div class="alert alert-danger mt-3" *ngIf="loginForm.get('password')?.invalid && loginForm.get('password')?.touched">
+                            password is required.
+                        </div>
+                    </div>
+                    <div>
+                        <button type="submit" class="btn">Login</button>
+                        <a class="forget" routerLink="/ForgetPassword" >Forget Password ?</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+          
+</section>
