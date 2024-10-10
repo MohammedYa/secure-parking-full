@@ -3,6 +3,8 @@
 ##
 ## Get latest from https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
 
+
+
 # User-specific files
 *.rsuser
 *.suo
@@ -340,6 +342,8 @@ ASALocalRun/
 
 # MSBuild Binary and Structured Log
 *.binlog
+
+bin/
 
 # NVidia Nsight GPU debugger configuration file
 *.nvuser
