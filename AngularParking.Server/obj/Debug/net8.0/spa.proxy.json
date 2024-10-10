@@ -2,7 +2,7 @@
 "SpaProxyServer": {
 "ServerUrl": "https://localhost:4200",
 "RedirectUrl": "",
-"LaunchCommand": "npm start",
+"LaunchCommand": "",
 "WorkingDirectory": "D:\\mgmg\\Projects\\secure-parking\\AngularParking.Server\\..\\angularparking.client",
 "MaxTimeoutInSeconds": "120",
 "KeepRunning": "false"

@@ -1,6 +1,7 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { environment } from '../../../environments/environment.development';
 import { AuthService } from './auth.service';
 
 @Injectable({
@@ -19,7 +20,7 @@ export class GetrequestsService {
   const headers = new HttpHeaders({
     'Authorization': `Bearer ${token}`
   });
-    return this._HttpClient.get(`${this._AuthService.BaseUrl}/api/ApplicationFormData/GetAllApplicationForm?skip=${skip}&take=${take}&Status=${Status}`,{headers})
+    return this._HttpClient.get(`${environment.api}/api/ApplicationFormData/GetAllApplicationForm?skip=${skip}&take=${take}&Status=${Status}`,{headers})
   } 
 
 
@@ -31,7 +32,7 @@ export class GetrequestsService {
   const headers = new HttpHeaders({
     'Authorization': `Bearer ${token}`
   });
-    return this._HttpClient.get(`${this._AuthService.BaseUrl}/api/ApplicationFormData/GetApplicationFormById/${Id}`,{headers})
+    return this._HttpClient.get(`${environment.api}/api/ApplicationFormData/GetApplicationFormById/${Id}`,{headers})
 }
 getstatises(status:any):Observable<any>{
   const token = localStorage.getItem("userToken");
@@ -40,7 +41,7 @@ getstatises(status:any):Observable<any>{
   const headers = new HttpHeaders({
     'Authorization': `Bearer ${token}`
   });
-    return this._HttpClient.get(`${this._AuthService.BaseUrl}/api/ApplicationFormData/GetStatiscs?Status=${status}`,{headers})
+    return this._HttpClient.get(`${environment.api}/api/ApplicationFormData/GetStatiscs?Status=${status}`,{headers})
 }
 getAllstatises():Observable<any>{
   const token = localStorage.getItem("userToken");
@@ -49,7 +50,7 @@ getAllstatises():Observable<any>{
   const headers = new HttpHeaders({
     'Authorization': `Bearer ${token}`
   });
-    return this._HttpClient.get(`${this._AuthService.BaseUrl}/api/ApplicationFormData/GetStatiscs`,{headers})
+    return this._HttpClient.get(`${environment.api}/api/ApplicationFormData/GetStatiscs`,{headers})
 }
 
 actionApplication(reqest:any):Observable<any>{
@@ -59,7 +60,7 @@ actionApplication(reqest:any):Observable<any>{
   const headers = new HttpHeaders({
     'Authorization': `Bearer ${token}`
   }); 
-  return this._HttpClient.post(`${this._AuthService.BaseUrl}/api/ApplicationFormData/CreateApplicationFormAction`,reqest,{headers})
+  return this._HttpClient.post(`${environment.api}/api/ApplicationFormData/CreateApplicationFormAction`,reqest,{headers})
 } 
 
 }

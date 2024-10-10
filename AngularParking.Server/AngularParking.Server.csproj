@@ -5,7 +5,6 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <SpaRoot>..\angularparking.client</SpaRoot>
-    <SpaProxyLaunchCommand>npm start</SpaProxyLaunchCommand>
     <SpaProxyServerUrl>https://localhost:4200</SpaProxyServerUrl>
   </PropertyGroup>
 
@@ -39,7 +38,7 @@
 		<Exec WorkingDirectory="$(SpaRoot)" Command="npm install -f" />
 		<Exec WorkingDirectory="$(SpaRoot)" Command="npm run build" />
 		<ItemGroup>
-			<DistFiles Include="$(SpaRoot)dist\secure-parking\browser\; $(SpaRoot)dist\secure-parking\server\" />
+			<DistFiles Include="$(SpaRoot)\dist\secure-parking\browser\**" />
 			<ResolvedFileToPublish Include="@(DistFiles->'%(FullPath)')" Exclude="@(ResolvedFileToPublish)">
 				<RelativePath>wwwroot\%(RecursiveDir)%(Filename)%(Extension)</RelativePath>
 				<CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>

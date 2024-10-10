@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121.
+-->
+<Project>
+  <PropertyGroup>
+    <_PublishTargetUrl>D:\mgmg\Projects\secure-parking\AngularParking.Server\bin\Release\net8.0\release\</_PublishTargetUrl>
+    <History>True|2024-10-10T16:18:37.0267926Z||;True|2024-10-10T19:17:24.1935197+03:00||;True|2024-10-10T19:16:47.9607591+03:00||;False|2024-10-10T19:15:36.7640608+03:00||;False|2024-10-10T19:15:07.6390372+03:00||;False|2024-10-10T19:14:07.1116838+03:00||;False|2024-10-10T19:13:11.0857591+03:00||;</History>
+    <LastFailureDetails />
+  </PropertyGroup>
+</Project>

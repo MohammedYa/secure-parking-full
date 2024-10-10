@@ -1,0 +1,1 @@
+D:\mgmg\Projects\secure-parking\angularparking.client\obj\Debug\angularparking.client.esproj.CoreCompileInputs.cache

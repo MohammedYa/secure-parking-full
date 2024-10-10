@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { environment } from '../../../environments/environment.development';
 import { AuthService } from './auth.service';
 AuthService
 @Injectable({
@@ -13,7 +14,7 @@ export class BookingService {
 
   bookspot(reqest:any):Observable<any>{
     
-    return this._HttpClient.post(`${this._AuthService.BaseUrl}/api/ApplicationFormData/CreateApplicationForm`,reqest)
+    return this._HttpClient.post(`${environment.api}/api/ApplicationFormData/CreateApplicationForm`,reqest)
   }                               
                               
 

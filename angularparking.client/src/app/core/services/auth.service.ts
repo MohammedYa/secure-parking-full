@@ -3,11 +3,11 @@ import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { jwtDecode } from 'jwt-decode';
 import { BehaviorSubject, Observable } from 'rxjs';
+import { environment } from '../../../environments/environment.development';
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
-BaseUrl:string="http://jasimaran-001-site1.ktempurl.com"
 UserData=new BehaviorSubject(null);
 constructor(private _HttpClient:HttpClient,private _Router:Router) {
 if(localStorage.getItem("UserToken")!=null){
@@ -16,7 +16,7 @@ this.saveUserData()
 }
 }
 loginPerson(userData:any):Observable<any>{
-return this._HttpClient.post(`${this.BaseUrl}/api/Login`,userData)
+return this._HttpClient.post(`${environment.api}/api/Login`,userData)
 }
 changePassword(obj: any): Observable<any> {
   
@@ -28,7 +28,7 @@ changePassword(obj: any): Observable<any> {
   });
 
 
-  return this._HttpClient.post(`${this.BaseUrl}/api/ChangePassword`, obj, { headers });
+  return this._HttpClient.post(`${environment.api}/api/ChangePassword`, obj, { headers });
 }
 
 saveUserData(){
