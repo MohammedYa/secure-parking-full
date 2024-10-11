@@ -3,7 +3,7 @@
 "ServerUrl": "https://localhost:4200",
 "RedirectUrl": "",
 "LaunchCommand": "",
-"WorkingDirectory": "D:\\mgmg\\Projects\\secure-parking\\AngularParking.Server\\..\\angularparking.client",
+"WorkingDirectory": "C:\\Users\\ascom\\OneDrive\\Desktop\\SPS\\secure-parking-full\\AngularParking.Server\\..\\angularparking.client",
 "MaxTimeoutInSeconds": "120",
 "KeepRunning": "false"
 }
