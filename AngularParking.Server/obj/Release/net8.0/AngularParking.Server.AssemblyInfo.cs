@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AngularParking.Server")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+af9d1ef27f0619ea0d0a53cf8b3abab1a74a2ae0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+71aec2ad3c0eb96fbed0182cc3e571fca2589914")]
 [assembly: System.Reflection.AssemblyProductAttribute("AngularParking.Server")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AngularParking.Server")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
