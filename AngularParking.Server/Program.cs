@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using AngularParking.Server.Services.Implementations;
 using AngularParking.Server.Services.Interfaces;
+using AngularParking.Server.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -17,6 +18,7 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddApiServices(builder.Configuration);
 builder.Services.AddSwaggerGen();
 builder.Services.AddCors(options =>
 {
