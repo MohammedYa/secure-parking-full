@@ -4414,19 +4414,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\medoe\\.nuget\\packages\\": {}
+    "C:\\Users\\ascom\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\mgmg\\Projects\\secure-parking\\AngularParking.Server\\AngularParking.Server.csproj",
+      "projectUniqueName": "C:\\Users\\ascom\\OneDrive\\Desktop\\SPS\\secure-parking-full\\AngularParking.Server\\AngularParking.Server.csproj",
       "projectName": "AngularParking.Server",
-      "projectPath": "D:\\mgmg\\Projects\\secure-parking\\AngularParking.Server\\AngularParking.Server.csproj",
-      "packagesPath": "C:\\Users\\medoe\\.nuget\\packages\\",
-      "outputPath": "D:\\mgmg\\Projects\\secure-parking\\AngularParking.Server\\obj\\",
+      "projectPath": "C:\\Users\\ascom\\OneDrive\\Desktop\\SPS\\secure-parking-full\\AngularParking.Server\\AngularParking.Server.csproj",
+      "packagesPath": "C:\\Users\\ascom\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ascom\\OneDrive\\Desktop\\SPS\\secure-parking-full\\AngularParking.Server\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\medoe\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ascom\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -4514,7 +4514,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
