@@ -4,8 +4,8 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 -->
 <Project>
   <PropertyGroup>
-    <_PublishTargetUrl>C:\Users\Mohammed Ramadan\Desktop\publish</_PublishTargetUrl>
-    <History>True|2024-10-04T07:46:50.2484232Z;True|2024-10-04T01:17:26.7091497+03:00;True|2024-10-04T01:10:49.0077276+03:00;True|2024-10-03T22:40:05.1352160+03:00;True|2024-10-03T22:00:33.7345558+03:00;</History>
+    <_PublishTargetUrl>C:\Users\ascom\OneDrive\Desktop\SPS\secure-parking-full\AngularParking.Server\bin\Release\net8.0</_PublishTargetUrl>
+    <History>True|2024-10-14T12:28:56.8307630Z||;True|2024-10-11T15:32:40.7509471+03:00||;False|2024-10-11T15:30:41.0869396+03:00||;False|2024-10-11T15:29:00.4711298+03:00||;True|2024-10-04T10:46:50.2484232+03:00||;True|2024-10-04T01:17:26.7091497+03:00||;True|2024-10-04T01:10:49.0077276+03:00||;True|2024-10-03T22:40:05.1352160+03:00||;True|2024-10-03T22:00:33.7345558+03:00||;</History>
     <LastFailureDetails />
   </PropertyGroup>
 </Project>
