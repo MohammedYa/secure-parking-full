@@ -40,6 +40,7 @@ align-items: center;
         letter-spacing: 1.5px;
         color: rgba(245, 245, 245, 1);
         font-family: Anton, sans-serif ;
+        cursor: pointer;
 
 }
 .nav-link:hover{
